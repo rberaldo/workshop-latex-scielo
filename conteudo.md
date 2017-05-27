@@ -10,7 +10,7 @@
 
 Mais tarde.
 
-## Linguagem de marcação
+## LaTeX: uma linguagem de marcação
 
 Assim como HTML, XML ou Markdown, o LaTeX é uma linguagem de _markup_ (marcação
 de texto). Em outras palavras, o usuário instrui o computador sobre como o
@@ -25,7 +25,11 @@ Assim, os arquivos-fonte `.tex` não são textos formatados, mas aquivos em text
 plano. Isso meramente significa que o arquivo contém apenas os 95 caracteres
 ASCII imprimíveis (UTF-8 também está se tornando lugar comum).
 
-## Um artigo de exemplo
+## Exemplo: um artigo
+
+Vamos abrir nosso primeiro arquivo `.tex`, localizado em
+[`exercicios/artigo.tex`](exercicios/artigo.tex).
+
 ## Comandos do LaTeX
 ### Comandos simples
 ### Comandos com argumentos
