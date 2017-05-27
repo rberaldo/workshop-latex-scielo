@@ -28,7 +28,7 @@ ASCII imprimíveis (UTF-8 também está se tornando lugar comum).
 ## Exemplo: um artigo
 
 Vamos abrir nosso primeiro arquivo `.tex`, localizado em
-[`exercicios/artigo.tex`](exercicios/artigo.tex).
+[`exemplos/artigo.tex`](exemplos/artigo.tex).
 
 ## Comandos do LaTeX
 ### Comandos simples
