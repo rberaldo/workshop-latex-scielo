@@ -1,0 +1,76 @@
+% Pacotes %%%%%%%%%%%%%%
+\begin{frame}[standout]
+  \Huge
+  Pacotes
+\end{frame}
+
+% Em exemplos anteriores, a hifenização e algumas strings (como \today) não
+% estavam corretas.
+\begin{frame}
+  \frametitle{Pacotes}
+  \huge
+  Vimos problemas com localização e hifenização
+\end{frame}
+
+% Para resolver, teremos que usar pacotes
+\begin{frame}
+  \frametitle{Pacotes}
+  \Huge
+  Solução: pacotes
+\end{frame}
+
+% Para carregar pacotes, usamos esta sintaxe
+\begin{frame}[fragile]
+  \frametitle{Pacotes}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+    \usepackage[opções]{pacote}
+  \end{minted}
+\end{frame}
+
+% Para resolvermos nossos problemas, usaremos o pacote polyglossia
+\begin{frame}
+  \frametitle{Pacotes}
+  \Huge
+  Pacote \code{polyglossia}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pacotes}
+  \Huge
+  O \code{polyglossia} traz benefícios como:
+  \begin{itemize}
+    \only<1>{\item Hifenização}
+    \only<2>{\item Strings como \mintinline{latex}{\today}}
+    \only<3>{\item Convenções tipográficas localizadas}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pacotes}
+  \Huge
+  Como carregar o pacote \code{polyglossia}?
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Pacotes}
+  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+    \usepackage{polyglossia}
+      \setdefaultlanguage{brazil}
+  \end{minted}
+\end{frame}
+
+% Para encontrar ajuda, podemos ler a documentação oficial dos pacotes que
+% estamos usando. Mostrar outras opções do polyglossia, por exemplo.
+\begin{frame}
+  \frametitle{Pacotes}
+  \Huge
+  Comprehensive \TeX{} Archive Network
+
+  \url{www.ctan.org}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pacotes}
+  \huge
+  \url{www.ctan.org/pkg/polyglossia}
+\end{frame}
