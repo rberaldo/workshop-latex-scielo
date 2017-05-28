@@ -1,0 +1,44 @@
+% Comandos %%%%%%%%%%%%%%
+% Sintaxe dos comandos LaTeX
+\begin{frame}[standout]
+  \Huge
+  Comandos
+\end{frame}
+
+% Comandos simples não têm argumentos
+\begin{frame}[fragile]
+  \frametitle{Comandos simples}
+  \begin{minted}[autogobble,fontsize=\huge,breaklines]{latex}
+    \tableofcontents
+  \end{minted}
+\end{frame}
+
+% Comandos simples e espaço em branco
+\begin{frame}[fragile]
+  \frametitle{Comandos simples e espaço em branco}
+  \begin{minted}[autogobble,fontsize=\normalsize,breaklines]{latex}
+    \tableofcontents Embora isso funcione, o próximo exemplo ganha mais pontos por estilo e ajuda na leitura do código. Por quê?
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Comandos simples e espaço em branco}
+  \begin{minted}[autogobble,fontsize=\normalsize,breaklines]{latex}
+    \tableofcontents
+    Esse exemplo é melhor, mas como espaço em branco não faz diferença, talvez valesse a pena colocar mais uma linha entre o parágrafo e o comando.
+  \end{minted}
+\end{frame}
+
+% Comandos com argumentos
+\begin{frame}[fragile]
+  \frametitle{Comandos com argumento}
+  \begin{minted}[autogobble,fontsize=\normalsize,breaklines]{latex}
+    \section{Introdução}\label{introducao}Este exemplo funciona, mas o código não é muito legível. O resultado será perfeito, entretanto.
+  \end{minted}
+\end{frame}
+
+% Voltemos ao exemplo para demonstrar
+\begin{frame}[standout]
+  \Huge
+  \filename{exemplo/artigo.tex}
+\end{frame}

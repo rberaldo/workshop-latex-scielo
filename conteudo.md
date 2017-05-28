@@ -30,7 +30,42 @@ ASCII imprimíveis (UTF-8 também está se tornando lugar comum).
 Vamos abrir nosso primeiro arquivo `.tex`, localizado em
 [`exemplos/artigo.tex`](exemplos/artigo.tex).
 
+Nesse arquivo, veremos:
+
+- Estrutura e capacidades de um documento LaTeX
+- Compilação usando lualatex
+- Comandos: `\section, \LaTeX, \tableofcontents, \url`
+- Classes: `article`, `minimal` e seu efeito em `\section`
+- Erros de compilação
+- Arquivos auxiliares e o comando `latexmk -c`
+
 ## Comandos do LaTeX
-### Comandos simples
-### Comandos com argumentos
+
+Comandos simples, como `\tableofcontents`, devem estar separados do texto por
+espaço em branco. Por exemplo:
+
+```latex
+\tableofcontents Embora isso funcione, o próximo exemplo ganha mais pontos por
+estilo e ajuda na leitura do código. Por quê?
+```
+
+```latex
+\tableofcontents
+Esse exemplo é melhor, mas como espaço em branco não faz diferença, talvez
+valesse a pena colocar mais uma linha entre o parágrafo e o comando.
+```
+
+Há, também, comandos que aceitam argumentos, como `\section{Introdução}`.
+Argumentos sempre ficam entre `{ chaves }`:
+
+```latex
+\section{Introdução}\label{introducao}Este exemplo funciona, mas o código não é
+muito legível. O resultado será perfeito, entretanto.
+```
+
+Vamos voltar ao arquivo [`exemplos/artigo.tex`](exemplos/artigo.tex) para
+aprender na prática sobre esses comandos.
+
 ### Espaço em branco
+
+Aqui teremos um exercício.
