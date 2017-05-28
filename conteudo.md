@@ -89,3 +89,41 @@ sobre espaços em branco e como usá-lo para tornar o código mais legível.
 Agora, vamos a [`exercicios/espaco-branco.tex`](exercicios/espaco-branco.tex) e
 resolver o problema proposto nos comentários. Quando o arquivo for compilado a
 primeira vez, haverá um problema de hifenização. Por quê?
+
+## Símbolos especiais
+
+### Aspas
+
+Em LaTeX, não usamos as chamadas “aspas burras” _("aspas burras")_:
+
+```latex
+``Devemos abrir aspas com dois acentos graves e fechar com duas aspas
+simples.''
+```
+
+### Hífen, travessão e a meia-risca
+
+Existe uma diferença entre o hífen, o travessão e a meia-risca:
+
+```latex
+Leve um guarda-chuva --- ouvi na rádio que pode chover entre 10h--13h.
+```
+
+### Caracteres reservados
+
+Como veremos no decorrer de nosso curso, os símbolos a seguir estão reservados
+para o uso do LaTeX:
+
+```latex
+# $ % ^ & _ { } ~ \
+```
+
+Devemos escapá-los para que sejam impresso da maneira correta:
+
+```latex
+\# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash
+```
+
+[`exercicio/caracteres-reservados.tex`](exercicio/caracteres-reservados.tex)
+não escapa os símbolos acima. Corrija o problema e compile o arquivo
+corretamente.
