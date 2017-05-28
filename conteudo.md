@@ -1,4 +1,4 @@
-# Introdução ao LaTeX para o SciELO: dia 1
+# Introdução ao LaTeX para o SciELO
 
 - Quem eu sou
 - Conteúdo do curso
@@ -36,7 +36,7 @@ primeiro arquivo `.tex`, localizado em [`exemplos/artigo.tex`](exemplos/artigo.t
 Nesse arquivo, veremos:
 
 - Estrutura e capacidades de um documento LaTeX
-- Compilação usando lualatex
+- Compilação usando `lualatex` (e `pdflatex`)
 - Comandos: `\section, \LaTeX, \tableofcontents, \url`
 - Classes: `article`, `minimal` e seu efeito em `\section`
 - Erros de compilação
@@ -165,3 +165,51 @@ carregar pacotes.
 Quando o exercício terminar, mostrar o [CTAN](https://ctan.org) e como
 encontrar documentação para os pacotes. Mostrar a documentação do `polyglossia`
 como exemplo.
+
+## Preâmbulo do documento
+
+Voltaremos ao documento [`exemplos/artigo.tex`](exemplos/artigo.tex) uma vez
+mais, para aprender mais sobre classes de documento.
+
+Documentos LaTeX são divididos em duas partes: o _preâmbulo_ e o documento em
+si. Na primeira parte, a primeira linha que nos chama a atenção é:
+
+```latex
+\documentclass[11pt,a4paper,oneside]{article}
+```
+Anteriormente discutimos duas classes LaTeX: article e minimal. Por exemplo:
+
+- `article`: para escrever artigos
+- `report`: para escrever relatórios
+- `book`: para livros
+- `letter`: para redigir letras
+- `memoir`: baseada na classe book, traz vários comandos úteis
+- `beamer`: para apresentações de slide
+
+Além dessas classes padrão, existem outras disponíveis para download.
+
+O que são essas palavras entre os dois colchetes? São opções que a classe
+`article` nos fornece por padrão. É bastante útil conhecer quais são as opções
+da classe que você decidiu utilizar. O que a primeira opção, `11pt` deve
+significar? Repetir para todas elas e explicar seus resultados. Aqui estão as
+opções de classe mais comuns:
+
+- `10pt, 11pt, 12pt`
+- `a4paper, letterpaper, ...`
+- `fleqn`: equações são alinhadas à esquerda ao invés de seres centralizadas.
+- `leqno`: a numeração das equações fica à esquerda ao invés da direita.
+- `titlepage, notitlepage`
+- `twocolumn`
+- `twoside, oneside`: arruma as margens para a impressão nos dois lados do
+  papel ou apenas um.
+- `landscape`: o documento é impresso em formato paisagem.
+- `openright, openany`: não funciona com a classe `article`, pois ela não
+  fornece o comando `chapter`.
+- `draft`: indica problemas de hifenização e justificação imprimindo um pequeno
+  quadrado na margem direita. Também suprime a colocação das imagens, colocando
+  um quadro em branco em seu lugar. O tempo de compilação é bem menor.
+
+Vamos abrir [`exemplos/artigo.tex`](exemplos/artigo.tex) para testar as classes
+e opções acima. Veremos também os comandos `\title`, `\author` e `\date`.
+
+
