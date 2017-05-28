@@ -4,7 +4,7 @@
 - Conteúdo do curso
 - Público-alvo
 - Para quem é o LaTeX?
-- Objetivos:
+- Objetivos
 
 ## História e filosofia
 
@@ -21,14 +21,17 @@ comandos a seguir devem fazer?
     \section{Introdução}
     \tableofcontents
 
-Assim, os arquivos-fonte `.tex` não são textos formatados, mas aquivos em texto
-plano. Isso meramente significa que o arquivo contém apenas os 95 caracteres
-ASCII imprimíveis (UTF-8 também está se tornando lugar comum).
+Muito embora você talvez nunca tenha visto um comando em LaTeX, fica claro que
+o primeiro indica o começo de uma seção e o segundo, insere o sumário. Logo
+veremos como esses comandos geram elementos visuais. Assim, os arquivos-fonte
+`.tex` não são textos formatados, mas aquivos em texto plano.  Isso meramente
+significa que o arquivo contém apenas os 95 caracteres ASCII imprimíveis (UTF-8
+também está se tornando lugar comum).
 
 ## Exemplo: um artigo
 
-Vamos abrir nosso primeiro arquivo `.tex`, localizado em
-[`exemplos/artigo.tex`](exemplos/artigo.tex).
+Para entender como comandos se transformam no produto final, abriremos nosso
+primeiro arquivo `.tex`, localizado em [`exemplos/artigo.tex`](exemplos/artigo.tex).
 
 Nesse arquivo, veremos:
 
@@ -68,4 +71,21 @@ aprender na prática sobre esses comandos.
 
 ### Espaço em branco
 
-Aqui teremos um exercício.
+Em LaTeX, múltiplos espaços em branco (espaços, TABs, novas linhas) são
+condensados para apenas _um_ espaço em branco. Assim, o exemplo a seguir terá o
+mesmo efeito do anterior:
+
+```latex
+\section      {Introdução}
+        \label{introducao}
+
+        Este exemplo funciona, mas o código não é
+muito legível.      O resultado será perfeito, entretanto.
+```
+
+Voltemos a [`exemplos/artigo.tex`](exemplos/artigo.tex) para aprender mais
+sobre espaços em branco e como usá-lo para tornar o código mais legível.
+
+Agora, vamos a [`exercicios/espaco-branco.tex`](exercicios/espaco-branco.tex) e
+resolver o problema proposto nos comentários. Quando o arquivo for compilado a
+primeira vez, haverá um problema de hifenização. Por quê?
