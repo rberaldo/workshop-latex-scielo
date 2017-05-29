@@ -128,43 +128,6 @@ Devemos escapá-los para que sejam impresso da maneira correta:
 não escapa os símbolos acima. Corrija o problema e compile o arquivo
 corretamente.
 
-## Pacotes
-
-Em alguns exercícios, vimos que a hifenização estava errada. Por padrão, o
-LaTeX é configurado para hifenizar de acordo com a língua inglesa. Para
-resolver esse problema, devemos carregar nosso primeiro _pacote_.
-
-Existem várias coisas que não são possíveis com o LaTeX básico — ao menos não
-trivialmente — mas durante sua vida como usuário desse sistema você descobrirá
-dezenas de pacotes muito úteis, que tornam tarefas tediosas e difíceis muito
-mais agradáveis de resolver. Para carregar um pacote, usamos a seguinte sintaxe
-no _preâmbulo_ do nosso arquivo:
-
-```latex
-\usepackage[opções]{pacote}
-```
-
-Para resolver o problema da localização do nosso arquivo, utilizaremos o pacote
-`polyglossia`:
-
-```latex
-\usepackage{polyglossia}
-  \setdefaultlanguage{brazil}
-```
-
-Algumas das capacidades do `polyglossia` são:
-
-- Ajustar calendário datas de acordo com a língua
-- Ajustar convenções tipográficas para a língua escolhida
-- Hifenização
-- Strings do documento (como em `\today`)
-
-Em [`exercicios/pacotes.tex`](exercicios/pacotes.tex), treinaremos como
-carregar pacotes.
-
-Quando o exercício terminar, mostrar o [CTAN](https://ctan.org) e como
-encontrar documentação para os pacotes. Mostrar a documentação do `polyglossia`
-como exemplo.
 
 ## Preâmbulo do documento
 
@@ -214,6 +177,44 @@ e opções acima. Veremos também os comandos `\title`, `\author` e `\date`.
 
 Feito isso, vamos resolver o exercício
 [`exercicios/meu-artigo.tex`](exercicios/meu-artigo.tex).
+
+## Pacotes
+
+Em alguns exercícios, vimos que a hifenização estava errada. Por padrão, o
+LaTeX é configurado para hifenizar de acordo com a língua inglesa. Para
+resolver esse problema, devemos carregar nosso primeiro _pacote_.
+
+Existem várias coisas que não são possíveis com o LaTeX básico — ao menos não
+trivialmente — mas durante sua vida como usuário desse sistema você descobrirá
+dezenas de pacotes muito úteis, que tornam tarefas tediosas e difíceis muito
+mais agradáveis de resolver. Para carregar um pacote, usamos a seguinte sintaxe
+no _preâmbulo_ do nosso arquivo:
+
+```latex
+\usepackage[opções]{pacote}
+```
+
+Para resolver o problema da localização do nosso arquivo, utilizaremos o pacote
+`polyglossia`:
+
+```latex
+\usepackage{polyglossia}
+  \setdefaultlanguage{brazil}
+```
+
+Algumas das capacidades do `polyglossia` são:
+
+- Ajustar calendário datas de acordo com a língua
+- Ajustar convenções tipográficas para a língua escolhida
+- Hifenização
+- Strings do documento (como em `\today`)
+
+Em [`exercicios/pacotes.tex`](exercicios/pacotes.tex), treinaremos como
+carregar pacotes.
+
+Quando o exercício terminar, mostrar o [CTAN](https://ctan.org) e como
+encontrar documentação para os pacotes. Mostrar a documentação do `polyglossia`
+como exemplo.
 
 ## Fontes
 
