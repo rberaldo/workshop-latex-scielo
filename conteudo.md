@@ -6,8 +6,6 @@
 - Para quem é o LaTeX?
 - Objetivos
 
-
-
 ## História e filosofia
 
 Mais tarde.
@@ -315,3 +313,55 @@ tradição tipográfica muito antiga, que ganhamos de graça usando o LaTeX.
 Vejamos o exemplos em [`exemplos/fontes.tex`](exemplos/fontes.tex) e depois,
 vamos resolver
 [`exercicios/sonhos-noites-verao.tex`](exercicios/sonhos-noites-verao.tex)
+
+## Layouts de página
+
+Usando a solução do exercício anterior, vamos mudar a opção de classe
+`onecolumn` para `twocolumn` e visualizar o efeito dessa mudança no layout da
+página. Também carregaremos o pacote `showframe`. As enormes margens parecem
+uma perda de papel — e são —, mas existe um motivo por trás delas: quando lemos
+uma linha longa demais, perdemos a noção de onde ela havia começado. O tamanho
+de linha ideal fica por volta de 66 caracteres, incluindo espaços. É por isso
+que jornais são divididos em tantas colunas. Para resolver esse problema das
+margens, existem algumas soluções:
+
+- Dividir o texto em duas colunas (melhor solução)
+- Carregar o pacote `fullpage`
+- Carregar o pacote `fullpage` com espaçamento grande entre as linhas
+
+Para arrumar o espaçamento entre as linhas, devemos utilizar o pacote
+`setspace`. Ele vem com os seguintes comandos:
+
+- `\singlespacing`
+- `\onehalfspacing`
+- `\doublespacing`
+
+Quando você utilizar o comando `\onehalfspacing`, por exemplo, o documento
+seguirá esse espaçamento até que outro espaçamento seja especificado.
+
+Outro fator que influencia o layout da página é seu estilo. O LaTeX vem com
+dois comandos, `\pagestyle{}` e `\thispagestyle{}`, que aceitam os seguintes
+argumentos:
+
+- `empty`: sem texto no cabeçalho e no rodapé
+- `plain`: cabeçalho limpo, mas o número da página aparece centralizado no
+  rodapé
+- `headings`: rodapé limpo, informações como o nome da seção e número da página
+  aparecem no cabeçalho
+
+Existem outras opções e comandos que nos permitem customizar o conteúdo do
+cabeçalho e do rodapé, mas não trataremos deles nesse workshop.
+
+Vejamos alguns exemplos em
+[`exemplos/layouts-pagina.tex`](exemplos/layouts-pagina.tex).
+
+Em [`exercicios/certificado.tex`](exercicios/certificado.tex), vamos começar a
+escrever um certificado de conclusão do workshop. No momento, não vamos nos
+preocupar com a posição exata do texto no papel. Algumas ideias de como
+implementar:
+
+- Um certificado em modo de paisagem é muito mais legal
+- Quais seriam os tamanhos dos diferentes textos? Qual a relação hierárquica
+  entre eles? Justifique sua decisão.
+
+A ideia para este exercício foi tirada do livro *LaTeX Tutorials: a Primer*.
