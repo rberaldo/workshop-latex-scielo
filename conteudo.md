@@ -6,6 +6,8 @@
 - Para quem é o LaTeX?
 - Objetivos
 
+
+
 ## História e filosofia
 
 Mais tarde.
@@ -109,6 +111,17 @@ Existe uma diferença entre o hífen, o travessão e a meia-risca:
 Leve um guarda-chuva --- ouvi na rádio que pode chover entre 10h--13h.
 ```
 
+### Espaços não-quebráveis
+
+Às vezes, é necessário que um espaço não se quebre ao fim de uma linha, por
+exemplo:
+
+```latex
+Às 10~horas de ontem…
+Fui à casa do Sr.~Silva…
+Veja mais na página~40.
+```
+
 ### Caracteres reservados
 
 Como veremos no decorrer de nosso curso, os símbolos a seguir estão reservados
@@ -127,7 +140,6 @@ Devemos escapá-los para que sejam impresso da maneira correta:
 [`exercicios/caracteres-reservados.tex`](exercicios/caracteres-reservados.tex)
 não escapa os símbolos acima. Corrija o problema e compile o arquivo
 corretamente.
-
 
 ## Preâmbulo do documento
 
