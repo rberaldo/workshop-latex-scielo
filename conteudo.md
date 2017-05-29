@@ -18,13 +18,13 @@ texto deve ser formatado e o programa segue as instruções. Ao contrário das
 linguagens anteriores, o LaTeX é mais *semântico*. Por exemplo, o que os
 comandos a seguir devem fazer?
 
-    \section{Introdução}
     \tableofcontents
+    \section{Introdução}
 
 Muito embora você talvez nunca tenha visto um comando em LaTeX, fica claro que
 o primeiro indica o começo de uma seção e o segundo, insere o sumário. Logo
 veremos como esses comandos geram elementos visuais. Assim, os arquivos-fonte
-`.tex` não são textos formatados, mas aquivos em texto plano.  Isso meramente
+`.tex` não são textos formatados, mas arquivos em texto plano.  Isso meramente
 significa que o arquivo contém apenas os 95 caracteres ASCII imprimíveis (UTF-8
 também está se tornando lugar comum).
 
@@ -94,7 +94,7 @@ primeira vez, haverá um problema de hifenização. Por quê?
 
 ### Aspas
 
-Em LaTeX, não usamos as chamadas “aspas burras” _("aspas burras")_:
+Em LaTeX, não usamos as chamadas “aspas burras” (`""`):
 
 ```latex
 ``Devemos abrir aspas com dois acentos graves e fechar com duas aspas
@@ -145,12 +145,14 @@ Voltaremos ao documento [`exemplos/artigo.tex`](exemplos/artigo.tex) uma vez
 mais, para aprender mais sobre classes de documento.
 
 Documentos LaTeX são divididos em duas partes: o _preâmbulo_ e o documento em
-si. Na primeira parte, a primeira linha que nos chama a atenção é:
+si, que fica entre `\begin{document}` e `\end{document}`. No preâmbulo de
+`artigo.tex`, a primeira linha que nos chama a atenção é:
 
 ```latex
 \documentclass[11pt,a4paper,oneside]{article}
 ```
-Anteriormente discutimos duas classes LaTeX: article e minimal. Por exemplo:
+Anteriormente discutimos duas classes LaTeX: `article` e `minimal`. A
+distribuição vem, no entanto, com mais classes por padrão. Por exemplo:
 
 - `article`: para escrever artigos
 - `report`: para escrever relatórios
@@ -181,6 +183,9 @@ opções de classe mais comuns:
 - `draft`: indica problemas de hifenização e justificação imprimindo um pequeno
   quadrado na margem direita. Também suprime a colocação das imagens, colocando
   um quadro em branco em seu lugar. O tempo de compilação é bem menor.
+
+Ressaltamos que as classes padrão não foram escritas para serem usadas em
+produção e devem ser ajustadas para resultados mais profissionais.
 
 Vamos abrir [`exemplos/artigo.tex`](exemplos/artigo.tex) para testar as classes
 e opções acima. Veremos também os comandos `\title`, `\author` e `\date`.
@@ -222,9 +227,11 @@ Algumas das capacidades do `polyglossia` são:
 Em [`exercicios/pacotes.tex`](exercicios/pacotes.tex), treinaremos como
 carregar pacotes.
 
-Quando o exercício terminar, mostrar o [CTAN](https://ctan.org) e como
-encontrar documentação para os pacotes. Mostrar a documentação do `polyglossia`
-como exemplo.
+O [CTAN](https://ctan.org) é o repositório de pacotes e documentação do LaTeX.
+Antes de resolver alguma tarefa manualmente, é uma boa ideia conferir se alguém
+já não resolveu o problema com um pacote. Além disso, é possível encontrar a
+documentação de todos os pacotes lá. Vejamos [a documentação do
+`polyglossia`](https://www.ctan.org/pkg/polyglossia), por exemplo.
 
 ## Fontes
 
@@ -239,7 +246,7 @@ Para isso, devemos carregar o pacote `fontspec`:
 
 ```latex
 \usepackage{fontspec}
-\setmainfont{Times New Roman}
+  \setmainfont{Times New Roman}
 ```
 
 ### Itálicos, negritos e outros tipos
