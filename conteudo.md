@@ -212,4 +212,93 @@ opções de classe mais comuns:
 Vamos abrir [`exemplos/artigo.tex`](exemplos/artigo.tex) para testar as classes
 e opções acima. Veremos também os comandos `\title`, `\author` e `\date`.
 
+Feito isso, vamos resolver o exercício
+[`exercicios/meu-artigo.tex`](exercicios/meu-artigo.tex).
 
+## Fontes
+
+Anteriormente, arquivos LateX compilados usando o programa `pdflatex` não
+podiam usar qualquer fonte. Existem catálogos de fontes suportadas por esse
+programa, como por exemplo [The LaTeX Font
+Catalogue](http://www.tug.dk/FontCatalogue/). Atualmente, no entanto, é
+possível usar o `lualatex` ou ainda o `xelatex`, que oferecem suporte aos
+formatos de fonte mais comuns.
+
+Para isso, devemos carregar o pacote `fontspec`:
+
+```latex
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+```
+
+### Itálicos, negritos e outros tipos
+
+Fontes geralmente vêm em famílias que contém diversos tipos: romanas maiúsculas
+e minúsculas, itálicos, negritos e versaletes, além dos algorismos de título e
+texto. A fonte usada por padrão no LaTeX, chamada de Computer Modern e
+projetada pelo próprio Knuth, é bastante completa nesse respeito. Para acessar
+esses tipos, temos os comandos a seguir à nossa disposição.
+
+- `\emph{}`: itálico quando em texto romano, romando quando em texto itálico
+- `\textbf{}`: negrito
+- `\textsc{}`: versaletes (em inglês: *small caps*)
+- `\texttt{}`: fonte de teletipo
+
+### Tamanhos
+
+Assim como diferentes tipos carregam diferentes significados, os tamanhos das
+fontes também devem revelar alguma intenção semântica. Os tamanhos também devem
+ter alguma relação entre si: uma escala.
+
+O LaTeX leva essas questões em consideração automaticamente quando usamos
+comandos como `\section`, por exemplo. Nós também podemos acessar esses
+tamanhos utilizando os seguintes comandos:
+
+- `\tiny`: 5pt
+- `\scriptsize`: 7pt
+- `\footnotesize`: 8pt
+- `\small`: 9pt
+- `\normalsize`: 10pt
+- `\large`: 12pt
+- `\Large`: 14pt
+- `\LARGE`: 17pt
+- `\huge`: 20pt
+- `\Huge`: 25pt
+
+Tenha em mente que os valores acima valem apenas para as classes quem vem por
+padrão no LaTeX e quando o valor de `normalsize` é igual a 10pt. Outras classes
+podem trazer outros valores, de acordo com a decisão de seu designer. Além
+disso, é importante dizer que o tamanho do ponto no TeX é diferente do tamanho
+usado atualmente pela maior parte dos programas. Quando Knuth projetou o
+sistema, a editoração digital não era comum e muito menos acessível. Durante a
+infância em Milwaukee, Wisconsin, seu pai era dono de uma editora. Assim, Knuth
+cresceu dentro da tradição anglo-saxã de tipografia, que define um ponto como
+0.35145980 mm. No entanto, com o advento do PostScript da Adobe, o ponto foi
+redefinido para 0.3527 mm (1/72 in).
+
+### Selecionar fontes diferentes
+
+Uma das maiores vantagens de utilizar o `fontspec`, como vimos acima, é o fácil
+acesso à de seleção de fontes. Antigamente, era necessário carregar um pacote
+que implementasse a fonte desejada em MetaFont. Hoje, é possível usar arquivos
+`ttf` e `otf`.
+
+Para selecionar uma fonte instalada no sistema nos diretórios padrões, basta
+usar o comando:
+
+    \setmainfont{Linux Libertine}
+
+Caso você esteja trabalhando com um dos editores online de LaTeX, é possível
+fazer o upload das fontes para o serviço e especificar o caminho. Por exemplo:
+
+    \setmainfont{Linux Libertine}[
+      Path = fonts/
+    ]
+
+Uma funcionalidade muitas vezes ignorada sobre as fontes são as ligaduras. Elas
+acontecem em sequências de caracteres que colidem naturalmente e são uma
+tradição tipográfica muito antiga, que ganhamos de graça usando o LaTeX.
+
+Vejamos o exemplos em [`exemplos/fontes.tex`](exemplos/fontes.tex) e depois,
+vamos resolver
+[`exercicios/sonhos-noites-verao.tex`](exercicios/sonhos-noites-verao.tex)
