@@ -109,7 +109,7 @@ Existe uma diferença entre o hífen, o travessão e a meia-risca:
 Leve um guarda-chuva --- ouvi na rádio que pode chover entre 10h--13h.
 ```
 
-### Espaços não-quebráveis
+### Espaços não quebráveis
 
 Às vezes, é necessário que um espaço não se quebre ao fim de uma linha, por
 exemplo:
@@ -141,8 +141,8 @@ corretamente.
 
 ## Preâmbulo do documento
 
-Voltaremos ao documento [`exemplos/artigo.tex`](exemplos/artigo.tex) uma vez
-mais, para aprender mais sobre classes de documento.
+Voltaremos ao documento [`exemplos/artigo.tex`](exemplos/artigo.tex) novamente,
+para aprender mais sobre classes de documento.
 
 Documentos LaTeX são divididos em duas partes: o _preâmbulo_ e o documento em
 si, que fica entre `\begin{document}` e `\end{document}`. No preâmbulo de
@@ -157,17 +157,12 @@ distribuição vem, no entanto, com mais classes por padrão. Por exemplo:
 - `article`: para escrever artigos
 - `report`: para escrever relatórios
 - `book`: para livros
-- `letter`: para redigir letras
+- `letter`: para redigir cartas
 - `memoir`: baseada na classe book, traz vários comandos úteis
 - `beamer`: para apresentações de slide
 
-Além dessas classes padrão, existem outras disponíveis para download.
-
-O que são essas palavras entre os dois colchetes? São opções que a classe
-`article` nos fornece por padrão. É bastante útil conhecer quais são as opções
-da classe que você decidiu utilizar. O que a primeira opção, `11pt` deve
-significar? Repetir para todas elas e explicar seus resultados. Aqui estão as
-opções de classe mais comuns:
+O que são essas palavras entre os dois colchetes? São algumas das opções que a
+classe `article` nos oferece. Aqui estão as opções de classe mais comuns:
 
 - `10pt, 11pt, 12pt`
 - `a4paper, letterpaper, ...`
@@ -184,13 +179,89 @@ opções de classe mais comuns:
   quadrado na margem direita. Também suprime a colocação das imagens, colocando
   um quadro em branco em seu lugar. O tempo de compilação é bem menor.
 
-Ressaltamos que as classes padrão não foram escritas para serem usadas em
-produção e devem ser ajustadas para resultados mais profissionais.
+Ressaltamos que as classes padrão (`article`, `report`, `book` e `letter`) não
+foram escritas para serem usadas em produção e devem ser ajustadas para
+resultados mais profissionais.
+
+Além disso, no preâmbulo também carregamos os _pacotes_, como veremos a seguir.
 
 Vamos abrir [`exemplos/artigo.tex`](exemplos/artigo.tex) para testar as classes
 e opções acima. Veremos também os comandos `\title`, `\author` e `\date`.
 
-Feito isso, vamos resolver o exercício
+## O corpo do documento
+
+Enquanto que o preâmbulo contém a declaração do tipo de documento, carrega os
+pacotes e configura algumas opções (como veremos a seguir), o corpo do
+documento contém o texto, dividido ou não em partes, capítulos, seções e
+parágrafos.
+
+O corpo do documento é delimitado por:
+
+```latex
+\begin{document}
+…
+\end{document}
+```
+
+Neste _ambiente_ que criamos, podemos estruturar nosso documento usando os
+comandos a seguir (os números são a _profundidade_ a subdivisão):
+
+- `\part`: -1
+- `\chapter`: 0 (apenas `book` e `report`)
+- `\section`: 1
+- `\subsection`: 2
+- `\subsubsection`: 3
+- `\paragraph`: 4
+- `\subparagraph`: 5
+
+Nenhum dos comandos de secionamento está disponível na classe `letter`.
+
+O valor de _profundidade_ é usado internamente pelo LaTeX. Na classe `article`,
+por exemplo, o contador `secnumdepth`, que define qual a parte mais profunda a
+ser numerada, é configurado para o valor `3`. Ou seja, `\paragraph` e
+`\subparagraph` não são numerados. É possível mudar esse comportamento com os
+comandos a seguir, que devem ir no preâmbulo:
+
+```latex
+\setcounter{secnumdepth}{1}
+```
+Também é possível controlar o que será incluído no sumário com o comando:
+
+```latex
+\setcounter{tocdepth}{2}
+```
+
+Alternativamente, os comandos acima possuem uma versão estrelada (`\section*`),
+que produz uma versão não numerada e que não aparece no sumário.
+
+Às vezes, o título de uma seção ou capítulo pode ser longo demais para o
+sumário. Por isso, é possível usar a seguinte sintaxe para controlar o nome que
+aparecerá no sumário:
+
+```latex
+\section[Seção muito longa]{Seção muito longa: provavelmente não ficará muito
+boa no sumário}
+```
+
+Parágrafos são criados deixando uma linha em branca entre eles. Entretanto,
+essa linha em branca apenas indica ao LaTeX o começo de um parágrafo novo e
+_não significa que uma linha em branco será impressa no documento_. O
+espaçamento entre parágrafos é controlado pelo valor de `\parskip`:
+
+```latex
+\setlength{\parskip}{1cm} % espaçamento fixo
+\setlength{\parskip}{1cm plus4mm minus3mm} % espaçamento variável
+```
+
+Finalmente, parágrafos que ocorrem imediatamente após uma subdivisão do
+documento não são indentados, por motivos de tradição tipográfica. No entanto,
+esse comportamento pode ser modificado carregando o pacote `indentfirst`.
+
+Vejamos esses conceitos demonstrados, mais uma vez, em
+[`exemplos/artigo.tex`](exemplos/artigo.tex).
+
+De posse desses conhecimentos sobre como documentos LaTeX são estruturados e o
+que deve ir no preâmbulo e no corpo do documento, vamos resolver
 [`exercicios/meu-artigo.tex`](exercicios/meu-artigo.tex).
 
 ## Pacotes
