@@ -18,8 +18,10 @@ texto deve ser formatado e o programa segue as instruções. Ao contrário das
 linguagens anteriores, o LaTeX é mais *semântico*. Por exemplo, o que os
 comandos a seguir devem fazer?
 
-    \tableofcontents
-    \section{Introdução}
+```latex
+\tableofcontents
+\section{Introdução}
+```
 
 Muito embora você talvez nunca tenha visto um comando em LaTeX, fica claro que
 o primeiro indica o começo de uma seção e o segundo, insere o sumário. Logo
@@ -375,14 +377,18 @@ que implementasse a fonte desejada em MetaFont. Hoje, é possível usar arquivos
 Para selecionar uma fonte instalada no sistema nos diretórios padrões, basta
 usar o comando:
 
-    \setmainfont{Linux Libertine}
+```latex
+\setmainfont{Linux Libertine}
+```
 
 Caso você esteja trabalhando com um dos editores online de LaTeX, é possível
 fazer o upload das fontes para o serviço e especificar o caminho. Por exemplo:
 
-    \setmainfont{Linux Libertine}[
-      Path = fonts/
-    ]
+```latex
+\setmainfont{Linux Libertine}[
+  Path = fonts/
+]
+```
 
 Uma funcionalidade muitas vezes ignorada sobre as fontes são as ligaduras. Elas
 acontecem em sequências de caracteres que colidem naturalmente e são uma
@@ -443,3 +449,61 @@ implementar:
   entre eles? Justifique sua decisão.
 
 A ideia para este exercício foi tirada do livro *LaTeX Tutorials: a Primer*.
+
+## Posição do texto
+
+Se quisermos que nosso certificado fique mais parecido com um de verdade,
+precisamos aprender a colocar nosso texto nas regiões do papel que desejamos.
+Por padrão, as caixas de texto em LaTeX são justificadas, mas há outras opções
+comuns como textos centralizados, alinhados à esquerda ou à direita.
+
+Para determinar a posição horizontal do texto, precisamos encontrar nosso
+primeiro *ambiente.* Na verdade, um dos primeiros construtos que encontramos em
+nossa jornada foi o ambiente `document`, delimitado por dois comandos: `\begin`
+e `\end`.
+
+O ambiente `center`, com o nome sugere, se encarrega de centralizar texto na
+página:
+
+```latex
+\begin{center}
+  Este texto será centralizado.
+hend{center}
+```
+
+De maneira similar, os ambiente `flushleft` e `flushright` alinham texto ao
+lado esquerdo e direito do papel, respectivamente.
+
+Além disso, é possível controlar o espaço dentro de uma linha com o comando
+`\hspace{comprimento}`, por exemplo:
+
+```latex
+Essa frase\hspace{2cm} está esticada.
+```
+
+Algumas unidades que o LaTeX reconhece são:
+
+- `mm`
+- `cm`
+- `in`
+- `pt`
+- `em` (comprimento da letra “m”)
+- `ex` (altura da letra “x”)
+- `\textheight` e `\textwidth` (altura e comprimento da corpo do texto)
+- `\pageheight` e `\pagewidth` (altura e comprimento da página toda)
+
+Ainda é possível utilizar o comando `\hfill`, que preenche todo o espaço
+disponível na linha:
+Large
+```latex
+Começo\hfill meio\hfill fim
+```
+
+Finalmente, o espaço vertical entre os parágrafos pode ser controlado da mesma
+maneira, com os comandos `\vspace{comprimento}` e `\vfill`.
+
+Vejamos mais no exemplo
+[`exemplos/posicao-texto.tex`](exemplos/posicao-texto.tex). Depois, vamos
+resolver
+[`exercicios/certificado-posicionado.tex`](exercicios/certificado-posicionado.tex).
+
