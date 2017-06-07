@@ -682,3 +682,45 @@ grande demais para este pequeno workshop. Deixo aqui alguns links úteis:
   tabelas](http://tex.stackexchange.com/q/49414)
 - [Table Generator](http://www.tablesgenerator.com/)
 - [Table Editor](http://truben.no/table/)
+
+## Imagens
+
+É possível importar gráficos em formatos como `png` e `jpg` usando o pacote
+`graphicx`. O pacote inclui uma série de comandos para redimensionar e
+rotacionar textos e gráficos, bem como o comando `\includegraphics`.
+
+```latex
+includegraphics[opções]{imagem}
+```
+
+O comando aceita uma série de opções. Durante este curso, veremos:
+
+- `width` e `height`: para controlar o comprimento e altura da imagem. Aceita
+  valores como `\textwidth` e `\pageheight`
+- `keepaspectratio`: um valor booleano
+- `scale`: por exemplo, o valor de 0.5 reduz a imagem pela metade
+
+Geralmente, usamos o ambiente `figure`, que funciona de maneira muito similar
+ao `table`:
+
+```latex
+\begin{figure}
+  \centering
+  \includegraphics{imagem}
+  \caption{Uma imagem de exemplo}
+  \label{fig:imagem}
+\end{figure}
+```
+
+Demonstraremos esses conceitos no arquivo
+[`exemplos/imagens.tex`](exemplos/imagens.tex). Vamos aprender a colocar duas
+imagens lado-a-lado com o ambiente `minipage`. É importante mencionar que, em
+alguns casos, é necessário rodar o comando `lualatex` mais de uma vez para que
+o documento compile corretamente. Como vimos anteriormente, documentos são
+compilados em apenas uma passada, geralmente gerando arquivos como `aux`, `log`
+etc. Eles precisam ser lidos para que referências e bibliografias apareçam
+corretamente.  Nesses casos, podemos usar o comando `latexmk --lualatex`.
+
+Para treinar o que aprendemos, copiar a solução do exercício anterior para
+[`exercicios/ilustrado.tex`](exercicios/ilustrado.tex). Adicionar uma imagem de
+sua escolha para ilustrar a tabela.
