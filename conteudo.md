@@ -553,3 +553,132 @@ contadores resetam quando uma lista é terminada. Podemos criar um novo contador
 `enumi` com `\setcounter{ingredients}{\value{enumi}}`. No começo da lista que
 queremos continuar, podemos usar o comando
 `\setcounter{enumi}{\value{ingredients}}`.
+
+## Tabelas e tabulares
+
+Tabelas são difíceis de escrever em qualquer tipo de editor de texto e, embora
+o LaTeX tenha ferramentas para lidar com esse tipo de construto textual, não
+devemos tentar imitar a abordagem de programas WYSIWYG.
+
+No LaTeX, assim como na tradição tipográfica, há uma distinção entre uma tabela
+“formal” (`table`), que é legendada e numerada e uma tabulação “informal”
+(`tabular`), que é apenas uma disposição de texto alinhado em linhas e colunas.
+Por exemplo:
+
+```latex
+\begin{tabular}{lcr}
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9
+\end{tabular}
+```
+
+O ambiente `tabular` não deve ser encarado simplesmente como uma maneira de
+fazer tabelas, mas primeiramente de alinhar textos na horizontal e na vertical.
+Sua sintaxe é `\begin{tabular}{alinhamentos}`. Os valores de alinhamento
+básicos são `c` (centro), `l` (esquerda) e `r` (direita). É possível, também,
+especificar linhas verticais com `|` e parágrafos com tamanhos definidos com
+`p{comprimento}` (alinhado ao topo), `m{comprimento}` (alinhado no meio) e
+`b{comprimento}` (alinhado em baixo).
+
+Linhas horizontais podem ser especificadas com `\hline`:
+
+```latex
+\begin{tabular}{l|c|r}
+\hline
+1 & 2 & 3\\
+4 & 5 & 6\\
+7 & 8 & 9\\
+\hline
+\end{tabular}
+```
+
+Linhas, sejam elas horizontais ou verticais, devem ser usadas com moderação. O
+objetivo da tabela é passar informação, portanto o texto deve ser o enfoque
+central. É melhor deixar que a informação respire, do que cercá-la. Nas
+palavras do Robert Bringhurst, em *Elementos do Estilo Tipográfico:*
+
+> Assim como o texto, as tabelas ficam canhestras quando abordadas de forma
+> puramente técnica. Boas soluções tipográficas não costumam surgir em resposta
+> a perguntas do tipo “Como posso enfiar essa quantidade de caracteres naquele
+> tanto de espaço?”. (p. 81)
+
+Veremos alguns exemplos de tabelas empregando essas ideias em
+[`exemplos/tabelas.tex`](exemplos/tabelas.tex):
+
+- A sintaxe do ambiente `tabular`
+- Como fazer tabelas que respiram e dão ênfase ao conteúdo
+- Quebras de linhas em tabelas
+- O pacote [`booktabs`](https://www.ctan.org/pkg/booktabs)
+- O comando `\multicolumn`
+- O pacote [`longtable`](https://www.ctan.org/pkg/longtable) e o comando
+  `\endhead`; existem outros comandos que não exploraremos aqui
+
+### Flutuando com `table`
+
+Até agora, temos colocado nossas tabelas em meio ao texto usando o ambiente
+`tabular`. É muito comum, no entanto, colocar tabelas em páginas dedicadas,
+para que não atrapalhem o fluxo do texto. O LaTeX é capaz de fazer isso usando
+uma abstração conhecida como *float*.
+
+Em LaTeX, os dois ambiente do tipo float mais comuns são `table` e `figure`:
+
+```latex
+\begin{table}[posição]
+  …
+\end{table}
+```
+
+As posições possíveis são:
+
+- `h`: aqui (here)
+- `t`: topo da página
+- `b`: base da página
+- `p`: página dedicada a floats
+- `!`: sobrescreva as restrições de float
+
+O padrão é `tbp`.
+
+Nossa primeira tabela poderia ser reescrita desta maneira:
+
+```latex
+\begin{table}
+  \centering
+  \begin{tabular}{lcr}
+  1 & 2 & 3\\
+  4 & 5 & 6\\
+  7 & 8 & 9
+  \end{tabular}
+  \caption{Números de 1 a 9}
+  \label{tab:numerosUmNove}
+\end{table}
+```
+
+Três comandos a notar: `\centering` pode ser usado ao invés do ambiente
+`center`, pois seu escopo estará limitado; `caption{legenda}` pode ser usado
+para adicionar uma legenda à tabela e `\label{referencia}` permite que
+referenciemos a tabela usando `\ref{referencia}`.
+
+Vamos voltar à [`exemplos/tabelas.tex`](exemplos/tabelas.tex) e testar o
+ambiente `table`. Então, resolver
+[`exercicios/robos.tex`](exercicios/robos.tex).
+
+### Ferramentas para tabelas
+
+As tabelas que discutimos durante esta introdução não precisaram de muito
+espaço horizontal. No entanto, há ocasiões nas quais desejamos escrever uma
+tabela com tamanho dinâmico e que tome a página toda. Para isso, existe o
+pacote [`tabularx`](https://www.ctan.org/pkg/tabularx), que define um novo
+ambiente que aceita o alinhamento `X`, que é flexível.
+
+Como em tudo em LaTeX, quantidade de pacotes e detalhes que podemos discutir é
+grande demais para este pequeno workshop. Deixo aqui alguns links úteis:
+
+- [Tutorial do Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Tables), do qual
+  tiramos muitas ideias
+- [Descrição de vários pacotes para tabelas, seus usos e
+  conflitos](http://tex.stackexchange.com/q/12672)
+- [Lista de ferramentas para ajudar a criação de
+  tabelas](http://tex.stackexchange.com/q/49414)
+- [Table Generator](http://www.tablesgenerator.com/)
+- [Table Editor](http://truben.no/table/)
