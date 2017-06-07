@@ -724,3 +724,107 @@ corretamente.  Nesses casos, podemos usar o comando `latexmk --lualatex`.
 Para treinar o que aprendemos, copiar a solução do exercício anterior para
 [`exercicios/ilustrado.tex`](exercicios/ilustrado.tex). Adicionar uma imagem de
 sua escolha para ilustrar a tabela.
+
+## Matemática
+
+Uma das principais vocação do LaTeX é a matemática. Até agora, temos trabalhado
+no chamado “modo de texto”. No “modo de matemática”, a maneira como o LaTeX
+compreende o que estamos digitando muda consideravelmente. Por exemplo, letras
+comuns são tratadas como variáveis.
+
+O modo de matemática vem em dois sabores: *inline* e *displayed*. O primeiro é
+útil quando queremos falar sobre várias variáveis em uma mesma linha. O segundo
+cria um novo parágrafo. Os comandos para acessar esses modos são:
+
+- Inline: `\begin{math} … \end{math}` ou `\( … \)`
+- Displayed: `\begin{displaymath} … \end{displaymath}` ou `\[ … \]`
+- Displayed com equações numeradas: `\begin{equation} … \end{equation}`
+
+(Nota: alguns livros e materiais ensinam o uso de `$ … $` para o modo
+matemático inline e `$$ … $$` para o modo matemático displayed. Essa sintaxe
+pertence ao TeX e foi depreciada no LaTeX.)
+
+Há uma infinidade de comandos para descrever matemática, portanto não seria
+possível ver todos eles nesse workshop. Porém, vamos explorar rapidamente os
+principais conceitos que devem deixar a vida de quem quer aprender muito mais fácil.
+
+Para uma lista relativamente completa, recomendamos o [artigo sobre LaTeX na
+Wikibooks](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
+
+### Símbolos
+
+Em nossos teclados, há vários símbolos usados na notação matemática. Por
+exemplo:
+
+```latex
++ - = ! / ( ) [ ] < > | ' :
+```
+
+No modo de matemática, o LaTeX os trata da maneira correta. Para outros
+símbolos que não estão em nosso teclado, existem comandos:
+
+```latex
+2 \times 2 = 4
+```
+
+### Alfabeto grego
+
+Há comandos fáceis de lembrar para acessar letras gregas:
+
+```latex
+\alpha, \beta, \pi
+```
+
+### Operadores
+
+Funções trigonométricas, logaritmos e exponenciais, limites, módulo etc. são
+alguns dos operadores que já estão definidos por padrão.
+
+```latex
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+
+\log xy = \log x + \log y
+```
+
+A Cifra de César funciona da seguinte maneira:
+
+```latex
+E_n(x) = (x + n) \bmod 26
+```
+
+### Potências e subscritos
+
+Potências são representadas com acentos circunflexos, `2^8`. Subscritos são
+representados com underlines, `a_b`. Como em muitos outros casos no modo de
+matemática, é possível agrupar valores usando chaves `{}`: `2^{32}`.
+
+```latex
+f(n) = 4n + n^2
+```
+
+### Frações
+
+O comando `\frac{numerador}{denominador}` cria frações:
+
+```latex
+F = G \frac{m_1 m_2}{d^2}
+```
+
+É possível colocar frações dentro de frações:
+
+```latex
+\frac{\frac{1}{x}+\frac{1}{y}}{y-z}
+```
+
+### Raízes
+
+O comando `\sqrt{n}` permite escrever raízes:
+
+```latex
+\sqrt{10^2} = 10
+
+\sqrt[3]{\frac{a}{b}}
+```
+
+Vejamos exemplos em [`exemplos/matematica.tex`](exemplos/matematica.tex).
+Depois, vamos resolver []().
