@@ -468,7 +468,7 @@ página:
 ```latex
 \begin{center}
   Este texto será centralizado.
-hend{center}
+\end{center}
 ```
 
 De maneira similar, os ambiente `flushleft` e `flushright` alinham texto ao
@@ -507,3 +507,49 @@ Vejamos mais no exemplo
 resolver
 [`exercicios/certificado-posicionado.tex`](exercicios/certificado-posicionado.tex).
 
+## Listas
+
+O LaTeX vem com três ambientes para descrever listas: `itemize`, `enumerate` e
+`description`. Eles permitem a criação de listas itemizadas, enumeradas e de
+descrição, respectivamente.
+
+```latex
+\begin{itemize}
+  \item O ambiente \code{itemize} é geralmente usado para listas cuja ordem
+  não é importante.
+  \item A numeração que listas do tipo \code{enumerate} trazem pode indicar
+  os passos necessários para completar uma tarefa, ou sua ordem de
+  importância.
+  \item A lista do tipo \code{description} é excelente para explicar
+  conceitos relacionados. Que oportunidade perdida de usá-la!
+\end{itemize}
+```
+
+Esses conceitos são explorados no arquivo
+[`exemplos/listas.tex`](exemplos/listas.tex). Veremos como criar listas dentro
+de listas e a sintaxe do ambiente `description`.
+
+### O pacote `enumerate`
+
+Uma maneira muito elegante de customizar listas ordenadas é o pacote
+[`enumerate`](https://www.ctan.org/pkg/enumerate). Ele adiciona um argumento
+adicional ao ambiente de mesmo nome, permitindo customizar a lista facilmente:
+
+```latex
+\begin{itemize}[A)]
+  \item Tales de Mileto
+  \item Pitágoras
+  \item Xenófanes
+  \item Empédocles
+  \item Aristóteles
+\end{itemize}
+```
+
+Para treinar, resolveremos o exercício
+[`exercicios/receita.tex`](exercicios/receita.tex), editando a lista de
+ingredientes para uma receite de panqueca. Entretanto, há um problema: os
+contadores resetam quando uma lista é terminada. Podemos criar um novo contador
+`\newcounter{ingredients}` e, ao fim da primeira lista, salvar o valor de
+`enumi` com `\setcounter{ingredients}{\value{enumi}}`. No começo da lista que
+queremos continuar, podemos usar o comando
+`\setcounter{enumi}{\value{ingredients}}`.
