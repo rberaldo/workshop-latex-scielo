@@ -2,7 +2,7 @@
 \usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate,mathtools,hologo}
 \usepackage[brazil]{babel}
 
-\usetheme[numbering=none]{metropolis}
+\usetheme[subsectionpage=progressbar,numbering=none]{metropolis}
 \beamertemplatenavigationsymbolsempty
 
 \newcommand{\filename}[1]{\texttt{#1}}
@@ -16,12 +16,12 @@
 \begin{document}
 \maketitle
 
-\begin{frame}
+\begin{frame}[allowframebreaks]
   \frametitle{Conteúdo}
   \setbeamertemplate{section in toc}[sections numbered]
-  \begin{multicols}{2}
-    \tableofcontents
-  \end{multicols}
+  \vfill
+  \tableofcontents[hideallsubsections]
+  \vfill
 \end{frame}
 
 \input{historia}
