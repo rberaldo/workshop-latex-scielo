@@ -6,6 +6,45 @@
 - Para quem é o LaTeX?
 - Objetivos
 
+<!-- vim-markdown-toc GFM -->
+* [História e filosofia](#histria-e-filosofia)
+* [LaTeX: uma linguagem de marcação](#latex-uma-linguagem-de-marcao)
+* [Exemplo: um artigo](#exemplo-um-artigo)
+* [Comandos do LaTeX](#comandos-do-latex)
+  * [Espaço em branco](#espao-em-branco)
+* [Símbolos especiais](#smbolos-especiais)
+  * [Aspas](#aspas)
+  * [Hífen, travessão e a meia-risca](#hfen-travesso-e-a-meia-risca)
+  * [Espaços não quebráveis](#espaos-no-quebrveis)
+  * [Caracteres reservados](#caracteres-reservados)
+* [Preâmbulo do documento](#prembulo-do-documento)
+* [O corpo do documento](#o-corpo-do-documento)
+* [Pacotes](#pacotes)
+* [Fontes](#fontes)
+  * [Itálicos, negritos e outros tipos](#itlicos-negritos-e-outros-tipos)
+  * [Tamanhos](#tamanhos)
+  * [Selecionar fontes diferentes](#selecionar-fontes-diferentes)
+* [Layouts de página](#layouts-de-pgina)
+* [Posição do texto](#posio-do-texto)
+* [Listas](#listas)
+  * [O pacote `enumerate`](#o-pacote-enumerate)
+* [Tabelas e tabulares](#tabelas-e-tabulares)
+  * [Flutuando com `table`](#flutuando-com-table)
+  * [Ferramentas para tabelas](#ferramentas-para-tabelas)
+* [Imagens](#imagens)
+* [Matemática](#matemtica)
+  * [Símbolos](#smbolos)
+  * [Alfabeto grego](#alfabeto-grego)
+  * [Operadores](#operadores)
+  * [Potências e subscritos](#potncias-e-subscritos)
+  * [Frações](#fraes)
+  * [Raízes](#razes)
+* [A classe `abntex2`](#a-classe-abntex2)
+* [Bibliografias](#bibliografias)
+* [Referências](#referncias)
+
+<!-- vim-markdown-toc -->
+
 ## História e filosofia
 
 - Donald Knuth nasceu em Milwaukee, Wisconsin, em 1938.
