@@ -22,15 +22,15 @@
 7. [O corpo do documento](#o-corpo-do-documento)
 8. [Pacotes](#pacotes)
 9. [Fontes](#fontes)
-  1. [Itálicos, negritos e outros tipos](#itálicos,-negritos-e-outros-tipos)
+  1. [Itálicos, negritos e outros tipos](#itálicos-negritos-e-outros-tipos)
   2. [Tamanhos](#tamanhos)
   3. [Selecionar fontes diferentes](#selecionar-fontes-diferentes)
 10. [Layouts de página](#layouts-de-página)
 11. [Posição do texto](#posição-do-texto)
 12. [Listas](#listas)
-  1. [O pacote `enumerate`](#o-pacote-`enumerate`)
+  1. [O pacote `enumerate`](#o-pacote-enumerate)
 13. [Tabelas e tabulares](#tabelas-e-tabulares)
-  1. [Flutuando com `table`](#flutuando-com-`table`)
+  1. [Flutuando com `table`](#flutuando-com-table)
   2. [Ferramentas para tabelas](#ferramentas-para-tabelas)
 14. [Imagens](#imagens)
 15. [Matemática](#matemática)
@@ -40,7 +40,7 @@
   4. [Potências e subscritos](#potências-e-subscritos)
   5. [Frações](#frações)
   6. [Raízes](#raízes)
-16. [A classe `abntex2`](#a-classe-`abntex2`)
+16. [A classe `abntex2`](#a-classe-abntex2)
 17. [Bibliografias](#bibliografias)
 18. [Referências](#referências)
 
@@ -51,9 +51,9 @@
   tipografia.
 - Na Caltech, foi contratado como professor associado. Começou a escrever um
   livro sobre compiladores, mas logo notou que o escopo da obra seria muito
-  maior. Planejou um livro de 12 capítulos que seria chamado *The Art of
+  maior. Planejou um livro de doze capítulos que seria chamado *The Art of
   Computer Programming*.
-- 1977: segunda edição do segundo volume do TAoCP não agradou Knuth
+- 1977: segunda edição do segundo volume do _TAoCP_ não agradou Knuth
 - ASCII não foi projetado para publicar livros
 - Pelos próximos 10 anos, ele trabalha no TeX
 - TeX: tau epsilon chi
@@ -937,7 +937,7 @@ correto da citação e da bibliografia.
 
 ## Referências
 
-- [Post no reddit sobre a tipografia do TAoCP antes do
+- [Post no reddit sobre a tipografia do _TAoCP_ antes do
   TeX](https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
 - [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
 - [História da codificação de
