@@ -1,24 +1,22 @@
 % LaTeX: uma linguagem de marcação %%%%%%%%%%%%%%
-\begin{frame}[standout]
-  \Huge
-  \LaTeX: uma linguagem de marcação
-\end{frame}
+\section{\LaTeX: uma linguagem de marcação}
 
 % O LaTeX é uma linguagem de marcação de texto, ou markup
 \begin{frame}
   \frametitle{\LaTeX: uma linguagem de marcação}
-  \only<1>{\Huge\LaTeX{} é uma linguagem de \emph{markup}}
-  \only<2>{\Huge Você \emph{declara} o documento}
-  \only<3>{\Huge O programa segue as instruções}
-  \only<4>{\Huge Assim como em \textsc{html}, o arquivo fonte é renderizado}
-  \only<5>{\Huge Comandos são semânticos}
+  \LARGE
+  \only<1>{\LaTeX{} é uma linguagem de \emph{markup}}
+  \only<2>{Você \emph{declara} o documento}
+  \only<3>{O programa segue as instruções}
+  \only<4>{Assim como em \textsc{html},\\ o arquivo fonte é renderizado}
+  \only<5>{Comandos são semânticos}
 \end{frame}
 
 % Se os comandos são semânticos, devem ser fáceis de interpretar. O que os
 % comandos abaixo significam?
 \begin{frame}[fragile]
   \frametitle{\LaTeX: uma linguagem de marcação}
-  \begin{minted}[autogobble,fontsize=\huge,breaklines]{latex}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
     \section{Introdução}
 
     \tableofcontents
@@ -28,6 +26,6 @@
 % Arquivos .tex não contém formatação; são texto plano.
 \begin{frame}
   \frametitle{\LaTeX: uma linguagem de marcação}
-  \Huge
+  \LARGE
   \code{.tex} são arquivos de texto plano
 \end{frame}

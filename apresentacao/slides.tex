@@ -2,18 +2,28 @@
 \usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate,mathtools,hologo}
 \usepackage[brazil]{babel}
 
-\usetheme[sectionpage=none,numbering=none]{metropolis}
+\usetheme[numbering=none]{metropolis}
 \beamertemplatenavigationsymbolsempty
 
 \newcommand{\filename}[1]{\texttt{#1}}
 \newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{\textless#1\textgreater}}}
 
 \title{Introdução ao \LaTeX\ no SciELO}
-\author{Rafael Beraldo}
+\author{Rafael Beraldo \qquad \email{rberaldo@cabaladada.org}}
 \date{13 e 14 de junho de 2017}
 
 \begin{document}
 \maketitle
+
+\begin{frame}
+  \frametitle{Conteúdo}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
+\end{frame}
+
 %\input{historia}
 \input{linguagem-marcacao}
 \input{exemplo-artigo}
