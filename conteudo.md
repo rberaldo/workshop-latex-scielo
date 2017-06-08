@@ -8,7 +8,20 @@
 
 ## História e filosofia
 
-Mais tarde.
+- Donald Knuth nasceu em Milwaukee, Wisconsin, em 1938.
+- Seu pai tinha uma pequena editora, por isso conhecia as tradições da
+  tipografia.
+- Na Caltech, foi contratado como professor associado. Começou a escrever um
+  livro sobre compiladores, mas logo notou que o escopo da obra seria muito
+  maior. Planejou um livro de 12 capítulos que seria chamado *The Art of
+  Computer Programming*.
+- 1977: segunda edição do segundo volume do TAoCP não agradou Knuth
+- ASCII não foi projetado para publicar livros
+- Pelos próximos 10 anos, ele trabalha no TeX
+- TeX: tau epsilon chi
+- [TeXBook](http://www.ctex.org/documents/shredder/src/texbook.pdf)
+- Leslie Lamport criou uma série de macros para usar o TeX, conhecidas como
+  LaTeX.
 
 ## LaTeX: uma linguagem de marcação
 
@@ -883,3 +896,15 @@ o comando `\bibliography{arquivo}`. No decorrer do texto, podemos utilizar os
 comandos `\cite[p.~20]{greenwade93}` e `\citeonline` para fazer referência à
 entrada bibliográfica desejada. Um arquivo `bst` fica responsável pelo estilo
 correto da citação e da bibliografia.
+
+## Referências
+
+- [Post no reddit sobre a tipografia do TAoCP antes do
+  TeX](https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
+- [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
+- [História da codificação de
+  fontes](http://www.lasca.ic.unicamp.br/pub/ctan/macros/latex/doc/encguide.pdf)
+- [LaTeX Tutorials: a
+  Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
+- _Elementos do Estilo Tipográfico versão 3.0_, por Robert Bringhurst. Cosac
+  Naify, 2008.
