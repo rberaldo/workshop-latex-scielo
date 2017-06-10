@@ -12,37 +12,21 @@
 2. [LaTeX: uma linguagem de marcação](#latex:-uma-linguagem-de-marcação)
 3. [Exemplo: um artigo](#exemplo:-um-artigo)
 4. [Comandos do LaTeX](#comandos-do-latex)
-  1. [Espaço em branco](#espaço-em-branco)
 5. [Símbolos especiais](#símbolos-especiais)
-  1. [Aspas](#aspas)
-  2. [Hífen, travessão e a meia-risca](#hífen,-travessão-e-a-meia-risca)
-  3. [Espaços não quebráveis](#espaços-não-quebráveis)
-  4. [Caracteres reservados](#caracteres-reservados)
 6. [Preâmbulo do documento](#preâmbulo-do-documento)
 7. [O corpo do documento](#o-corpo-do-documento)
 8. [Pacotes](#pacotes)
 9. [Fontes](#fontes)
-  1. [Itálicos, negritos e outros tipos](#itálicos-negritos-e-outros-tipos)
-  2. [Tamanhos](#tamanhos)
-  3. [Selecionar fontes diferentes](#selecionar-fontes-diferentes)
 10. [Layouts de página](#layouts-de-página)
 11. [Posição do texto](#posição-do-texto)
 12. [Listas](#listas)
-  1. [O pacote `enumerate`](#o-pacote-enumerate)
 13. [Tabelas e tabulares](#tabelas-e-tabulares)
-  1. [Flutuando com `table`](#flutuando-com-table)
-  2. [Ferramentas para tabelas](#ferramentas-para-tabelas)
 14. [Imagens](#imagens)
 15. [Matemática](#matemática)
-  1. [Símbolos](#símbolos)
-  2. [Alfabeto grego](#alfabeto-grego)
-  3. [Operadores](#operadores)
-  4. [Potências e subscritos](#potências-e-subscritos)
-  5. [Frações](#frações)
-  6. [Raízes](#raízes)
 16. [A classe `abntex2`](#a-classe-abntex2)
 17. [Bibliografias](#bibliografias)
-18. [Referências](#referências)
+18. [Macros](#macros)
+19. [Referências](#referências)
 
 ## História e filosofia
 
@@ -53,7 +37,7 @@
   livro sobre compiladores, mas logo notou que o escopo da obra seria muito
   maior. Planejou um livro de doze capítulos que seria chamado *The Art of
   Computer Programming*.
-- 1977: segunda edição do segundo volume do _TAoCP_ não agradou Knuth
+- 1977: segunda edição do segundo volume do *TAoCP* não agradou Knuth
 - ASCII não foi projetado para publicar livros
 - Pelos próximos 10 anos, ele trabalha no TeX
 - TeX: tau epsilon chi
@@ -63,7 +47,7 @@
 
 ## LaTeX: uma linguagem de marcação
 
-Assim como HTML, XML ou Markdown, o LaTeX é uma linguagem de _markup_ (marcação
+Assim como HTML, XML ou Markdown, o LaTeX é uma linguagem de *markup* (marcação
 de texto). Em outras palavras, o usuário instrui o computador sobre como o
 texto deve ser formatado e o programa segue as instruções. Ao contrário das
 linguagens anteriores, o LaTeX é mais *semântico*. Por exemplo, o que os
@@ -125,7 +109,7 @@ aprender na prática sobre esses comandos.
 ### Espaço em branco
 
 Em LaTeX, múltiplos espaços em branco (espaços, TABs, novas linhas) são
-condensados para apenas _um_ espaço em branco. Assim, o exemplo a seguir terá o
+condensados para apenas *um* espaço em branco. Assim, o exemplo a seguir terá o
 mesmo efeito do anterior:
 
 ```latex
@@ -197,7 +181,7 @@ corretamente.
 Voltaremos ao documento [`exemplos/artigo.tex`](exemplos/artigo.tex) novamente,
 para aprender mais sobre classes de documento.
 
-Documentos LaTeX são divididos em duas partes: o _preâmbulo_ e o documento em
+Documentos LaTeX são divididos em duas partes: o *preâmbulo* e o documento em
 si, que fica entre `\begin{document}` e `\end{document}`. No preâmbulo de
 `artigo.tex`, a primeira linha que nos chama a atenção é:
 
@@ -236,7 +220,7 @@ Ressaltamos que as classes padrão (`article`, `report`, `book` e `letter`) não
 foram escritas para serem usadas em produção e devem ser ajustadas para
 resultados mais profissionais.
 
-Além disso, no preâmbulo também carregamos os _pacotes_, como veremos a seguir.
+Além disso, no preâmbulo também carregamos os *pacotes*, como veremos a seguir.
 
 Vamos abrir [`exemplos/artigo.tex`](exemplos/artigo.tex) para testar as classes
 e opções acima. Veremos também os comandos `\title`, `\author` e `\date`.
@@ -256,8 +240,8 @@ O corpo do documento é delimitado por:
 \end{document}
 ```
 
-Neste _ambiente_ que criamos, podemos estruturar nosso documento usando os
-comandos a seguir (os números são a _profundidade_ a subdivisão):
+Neste *ambiente* que criamos, podemos estruturar nosso documento usando os
+comandos a seguir (os números são a *profundidade* a subdivisão):
 
 - `\part`: -1
 - `\chapter`: 0 (apenas `book` e `report`)
@@ -269,7 +253,7 @@ comandos a seguir (os números são a _profundidade_ a subdivisão):
 
 Nenhum dos comandos de secionamento está disponível na classe `letter`.
 
-O valor de _profundidade_ é usado internamente pelo LaTeX. Na classe `article`,
+O valor de *profundidade* é usado internamente pelo LaTeX. Na classe `article`,
 por exemplo, o contador `secnumdepth`, que define qual a parte mais profunda a
 ser numerada, é configurado para o valor `3`. Ou seja, `\paragraph` e
 `\subparagraph` não são numerados. É possível mudar esse comportamento com os
@@ -298,7 +282,7 @@ boa no sumário}
 
 Parágrafos são criados deixando uma linha em branca entre eles. Entretanto,
 essa linha em branca apenas indica ao LaTeX o começo de um parágrafo novo e
-_não significa que uma linha em branco será impressa no documento_. O
+*não significa que uma linha em branco será impressa no documento*. O
 espaçamento entre parágrafos é controlado pelo valor de `\parskip`:
 
 ```latex
@@ -321,13 +305,13 @@ que deve ir no preâmbulo e no corpo do documento, vamos resolver
 
 Em alguns exercícios, vimos que a hifenização estava errada. Por padrão, o
 LaTeX é configurado para hifenizar de acordo com a língua inglesa. Para
-resolver esse problema, devemos carregar nosso primeiro _pacote_.
+resolver esse problema, devemos carregar nosso primeiro *pacote*.
 
 Existem várias coisas que não são possíveis com o LaTeX básico — ao menos não
 trivialmente — mas durante sua vida como usuário desse sistema você descobrirá
 dezenas de pacotes muito úteis, que tornam tarefas tediosas e difíceis muito
 mais agradáveis de resolver. Para carregar um pacote, usamos a seguinte sintaxe
-no _preâmbulo_ do nosso arquivo:
+no *preâmbulo* do nosso arquivo:
 
 ```latex
 \usepackage[opções]{pacote}
@@ -878,7 +862,7 @@ O comando `\sqrt{n}` permite escrever raízes:
 ```
 
 Vejamos exemplos em [`exemplos/matematica.tex`](exemplos/matematica.tex).
-Depois, vamos resolver []().
+Depois, vamos resolver [`exercicios/equacao.tex`](exercicios/equacao.tex).
 
 ## A classe `abntex2`
 
@@ -911,6 +895,9 @@ anatomia de uma monografia ficcional. Veja o
 [manual](http://repositorios.cpai.unb.br/ctan/macros/latex/contrib/abntex2/doc/abntex2.pdf)
 para mais informações sobre a organização do arquivo.
 
+Estudaremos
+[`exemplos/abntex2/trabalho-normatizado.tex`](exemplos/abntex2/trabalho-normatizado.tex).
+
 ## Bibliografias
 
 Bibliografias em LaTeX não são tão complicadas quanto parecem. A ideia é a
@@ -935,14 +922,116 @@ comandos `\cite[p.~20]{greenwade93}` e `\citeonline` para fazer referência à
 entrada bibliográfica desejada. Um arquivo `bst` fica responsável pelo estilo
 correto da citação e da bibliografia.
 
+Vejamos o arquivo
+[`exemplos/abntex2/trabalho-normatizado.tex`](exemplos/abntex2/trabalho-normatizado.tex).
+
+## Macros
+
+Uma das maiores vantagens do LaTeX em relação aos outros editores de texto é a
+sua extensibilidade. É possível adicionar funcionalidades ao sistema por meio
+de *macros*. O próprio LaTeX não passa de um conjunto (bastante complexo) de
+macros do TeX.
+
+Essas macros são programas que automatizam certas funções e permitem que o
+autor foque em escrever, ao invés de realizar tarefas tediosas repetidamente.
+
+### Macros de substituição
+
+O tipo mais simples de macro é o de substituição:
+
+```latex
+\newcommand{\scielo}{SciELO}
+```
+
+Declarações do tipo `\newcommand` devem fica no preâmbulo do documento. Após
+declarar o comando anterior, podemos usar `\scielo` por todo o documento com a
+garantia de que o texto nunca terá erros de digitação.
+
+Ao utilizar esta macro, é necessário incluir um espaço antes do resto do texto,
+ou o espaço em branco será engolido: `\scielo{} texto`. Isso ocorre, pois o
+LaTeX está esperando um argumento. No entanto, é possível carregar o pacote
+`xspace`, que adiciona esse espaço de maneira automática:
+
+```latex
+\usepackage{xspace}
+\newcommand{\scielo}{SciELO\xspace}
+```
+
+### Macros com variáveis
+
+É possível usar o método acima para guardar informações, como o nome do autor
+ou título do documento. O comando `\maketitle`, por exemplo, faz uso dos
+comandos `\@title`, `\@author` e `\@date`, que são configurados pelo autor
+usando os comandos `\title`, `\author` e `\date`, respectivamente.
+
+O uso de `@` previne que essas macros sejam usadas acidentalmente pelo usuário,
+de modo que devemos utilizar os comandos `\makeatletter` e `\makeatother` para
+poder utilizar as macros acima.
+
+Também é possível redefinir uma macro em LaTeX, usando o comando
+`\renewcommand`:
+
+```latex
+\makeatletter % Para acessar comandos como \@author
+\renewcommand{\maketitle}{
+  \begin{flushleft}
+    \sffamily
+    % Vamos colocar uma régua com a largura da linha e a espessura de 1pt
+    {\rule{\linewidth}{1pt}}
+    % Título
+    {\Large\bfseries\@title\par}
+    \medskip
+    % Autor
+    {\color{darkgray}\large\itshape por \@author{}\par
+    % Data
+    dia \@date \par}
+    % Mais uma régua
+    {\rule{\linewidth}{1pt}}
+    % Espaçamento entre o título e resto do documento
+    \bigskip
+  \end{flushleft}
+}
+\makeatother
+```
+
+### Macros com argumentos
+
+Já encontramos muitos comandos que levam argumentos, como por exemplo
+`\textbf{}`. Digamos, por exemplo, que nosso texto é repleto de palavras em
+inglês, que desejamos diferenciar do resto do texto usando itálico (ou romanas,
+quando o texto ao redor for itálico) e, além disso, garantir que serão
+hifenizadas de acordo com as regras da língua inglesa, quando ocorrerem ao fim
+de uma linha. Podemos declarar um comando `\eng{}` facilmente, da seguinte
+maneira:
+
+```latex
+\newcommand{\eng}[1]{%
+  \emph{\textenglish{#1}}%
+}
+```
+
+Onde `1` indica a quantidade de argumentos que nosso comando irá receber e `#1`
+será substituído pelo argumento provido pelo usuário:
+
+```latex
+Texto em português \eng{with some English text that will be hypenated
+correctly} caso o texto quebre naquela parte.
+```
+
+Temos exemplos no arquivo [`exemplos/macros.tex`](exemplos/macros.tex). A
+seguir, resolver o exercício
+[`exercicios/automatizando.tex`](exercicios/automatizando.tex).
+
 ## Referências
 
-- [Post no reddit sobre a tipografia do _TAoCP_ antes do
-  TeX](https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
+- [Sobre a tipografia do *TAoCP* antes do TeX]
+  (https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
 - [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
-- [História da codificação de
-  fontes](http://www.lasca.ic.unicamp.br/pub/ctan/macros/latex/doc/encguide.pdf)
-- [LaTeX Tutorials: a
-  Primer](https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
-- _Elementos do Estilo Tipográfico versão 3.0_, por Robert Bringhurst. Cosac
+- [História da codificação de fontes]
+  (http://www.lasca.ic.unicamp.br/pub/ctan/macros/latex/doc/encguide.pdf)
+- [LaTeX Tutorials: a Primer]
+  (https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
+- *Elementos do Estilo Tipográfico versão 3.0*, por Robert Bringhurst. Cosac
   Naify, 2008.
+- [*A beginner’s introduction to typesetting with LaTeX*, por Peter - Flynn]
+  (https://www.ctan.org/pkg/beginlatex)

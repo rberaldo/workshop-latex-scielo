@@ -1,13 +1,21 @@
 \documentclass[final]{beamer}
-\usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate,mathtools,hologo}
+\usepackage{hyperref,xspace,graphicx,microtype,minted,multicol,mflogo,enumerate,mathtools,hologo,xcolor}
 \usepackage[brazil]{babel}
 
 \usetheme[subsectionpage=progressbar,numbering=none]{metropolis}
 \beamertemplatenavigationsymbolsempty
 
+% Macros
 \newcommand{\filename}[1]{\texttt{#1}}
+%
 \newcommand{\code}[1]{\texttt{#1}}
-\newcommand{\email}[1]{\href{mailto:#1}{\texttt{\textless#1\textgreater}}}
+%
+\newcommand{\email}[1]{\href{mailto:#1} {\texttt{\textless#1\textgreater}}
+}
+%
+\newcommand{\latexcode}[1]{\mintinline{latex}{#1}}
+%
+\newcommand{\todo}[1]{\colorbox{yellow}{#1}}
 
 \title{Introdução ao \LaTeX\ no SciELO}
 \author{Rafael Beraldo \qquad \email{rberaldo@cabaladada.org}}
@@ -16,12 +24,13 @@
 \begin{document}
 \maketitle
 
-\begin{frame}[allowframebreaks]
+% Conteúdo
+\begin{frame}
   \frametitle{Conteúdo}
   \setbeamertemplate{section in toc}[sections numbered]
-  \vfill
-  \tableofcontents[hideallsubsections]
-  \vfill
+  \begin{multicols}{2}
+    \tableofcontents
+  \end{multicols}
 \end{frame}
 
 \input{historia}
@@ -42,8 +51,8 @@
 \input{matematica}
 \input{abntex2}
 \input{bibliografias}
+\input{macros}
 %\input{memoir}
-%\input{macros}
 %\input{pacotes-uteis}
 %\input{escrevendo-classes}
 \input{obrigado}
