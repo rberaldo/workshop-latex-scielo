@@ -26,7 +26,8 @@
 16. [A classe `abntex2`](#a-classe-abntex2)
 17. [Bibliografias](#bibliografias)
 18. [Macros](#macros)
-19. [Referências](#referências)
+19. [Pacotes úteis](#pacotes-úteis)
+20. [Referências](#referências)
 
 ## História e filosofia
 
@@ -1018,9 +1019,32 @@ Texto em português \eng{with some English text that will be hypenated
 correctly} caso o texto quebre naquela parte.
 ```
 
+### Novos ambientes
+
+Também é possível definir novos ambientes em LaTeX. A sintaxe é:
+
+```latex
+\newenvironment{nome}[num]{antes}{depois}
+```
+
+Por exemplo, o ambiente a seguir deixa o texto em itálico:
+
+```latex
+\newenvironment{italics}{\itshape}{}
+```
+
 Temos exemplos no arquivo [`exemplos/macros.tex`](exemplos/macros.tex). A
 seguir, resolver o exercício
 [`exercicios/automatizando.tex`](exercicios/automatizando.tex).
+
+## Pacotes úteis
+
+### `microtype`
+### `fancyhdr`
+### `titling`
+### `sectsty`
+### `tcolorbox`
+### `geometry`
 
 ## Referências
 

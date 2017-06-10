@@ -8,6 +8,7 @@
 % - Uso do pacote xspace
 % - Redefinição de macros e customização do \maketitle
 % - Criação de macros que levam argumentos
+% - Criação de novos ambientes
 %
 
 \documentclass[a4paper]{article}
@@ -25,6 +26,20 @@
 \newcommand{\eng}[1]{%
   \emph{\textenglish{#1}}%
 }
+
+% Novo ambiente
+\newenvironment{spotlight}
+{
+  \vspace{1em}
+  \noindent\rule{\linewidth}{.5pt}\par\vspace{5pt}
+  \noindent\ignorespaces
+}
+{
+  \par
+  \noindent\rule{\linewidth}{.5pt}
+  \vspace{1em}\ignorespacesafterend
+}
+
 
 \title{Macros: como automatizar funções no \LaTeX}
 \author{Rafael Beraldo}
@@ -81,5 +96,18 @@ exemplo no preâmbulo de como utilizar esses comandos para redefinir o título.
 
 Este é uma parágrafo que contém \eng{some sentences in English which are
 hyphenated according to the correct rules}, se necessário.
+
+\section{Novos ambientes}
+
+Também é possível definir um ambiente novo:
+
+\begin{spotlight}
+  O cuidado em identificar pontos críticos no entendimento das metas propostas
+  pode nos levar a considerar a reestruturação dos conhecimentos estratégicos
+  para atingir a excelência. Todavia, a valorização de fatores subjetivos
+  talvez venha a ressaltar a relatividade das formas de ação.
+\end{spotlight}
+
+Vejamos a definição do ambiente no preâmbulo.
 
 \end{document}

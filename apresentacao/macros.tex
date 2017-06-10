@@ -76,6 +76,7 @@
   Macros podem levar argumentos: \mintinline{latex}{\textbf{texto}}
 \end{frame}
 
+% Sintaxe de macros com argumentos
 \begin{frame}[fragile]
   \frametitle{Macros com argumentos: sintaxe}
   \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
@@ -84,6 +85,16 @@
   }
   …
   \eng{some text in English}
+  \end{minted}
+\end{frame}
+
+% Também é possível definir novos ambientes
+\begin{frame}[fragile]
+  \frametitle{Novos ambientes}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
+  \newenvironment{italics}
+  {\itshape}
+  {}
   \end{minted}
 \end{frame}
 
