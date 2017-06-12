@@ -4,6 +4,7 @@
 - Conteúdo do curso
 - Público-alvo
 - Para quem é o LaTeX?
+- Quem usa LaTeX?
 - Objetivos
 
 ## Conteúdo
@@ -104,6 +105,8 @@ Argumentos sempre ficam entre `{ chaves }`:
 muito legível. O resultado será perfeito, entretanto.
 ```
 
+### Exemplo
+
 Vamos voltar ao arquivo [`exemplos/artigo.tex`](exemplos/artigo.tex) para
 aprender na prática sobre esses comandos.
 
@@ -120,6 +123,8 @@ mesmo efeito do anterior:
         Este exemplo funciona, mas o código não é
 muito legível.      O resultado será perfeito, entretanto.
 ```
+
+#### Exemplo e exercício
 
 Voltemos a [`exemplos/artigo.tex`](exemplos/artigo.tex) para aprender mais
 sobre espaços em branco e como usá-lo para tornar o código mais legível.
@@ -173,6 +178,8 @@ Devemos escapá-los para que sejam impresso da maneira correta:
 \# \$ \% \^{} \& \_ \{ \} \~{} \textbackslash
 ```
 
+### Exercício
+
 [`exercicios/caracteres-reservados.tex`](exercicios/caracteres-reservados.tex)
 não escapa os símbolos acima. Corrija o problema e compile o arquivo
 corretamente.
@@ -222,6 +229,8 @@ foram escritas para serem usadas em produção e devem ser ajustadas para
 resultados mais profissionais.
 
 Além disso, no preâmbulo também carregamos os *pacotes*, como veremos a seguir.
+
+### Exemplo
 
 Vamos abrir [`exemplos/artigo.tex`](exemplos/artigo.tex) para testar as classes
 e opções acima. Veremos também os comandos `\title`, `\author` e `\date`.
@@ -295,6 +304,8 @@ Finalmente, parágrafos que ocorrem imediatamente após uma subdivisão do
 documento não são indentados, por motivos de tradição tipográfica. No entanto,
 esse comportamento pode ser modificado carregando o pacote `indentfirst`.
 
+### Exemplo e exercício
+
 Vejamos esses conceitos demonstrados, mais uma vez, em
 [`exemplos/artigo.tex`](exemplos/artigo.tex).
 
@@ -333,8 +344,12 @@ Algumas das capacidades do `polyglossia` são:
 - Hifenização
 - Strings do documento (como em `\today`)
 
+### Exercício
+
 Em [`exercicios/pacotes.tex`](exercicios/pacotes.tex), treinaremos como
 carregar pacotes.
+
+### Documentação no CTAN
 
 O [CTAN](https://ctan.org) é o repositório de pacotes e documentação do LaTeX.
 Antes de resolver alguma tarefa manualmente, é uma boa ideia conferir se alguém
@@ -430,6 +445,8 @@ Uma funcionalidade muitas vezes ignorada sobre as fontes são as ligaduras. Elas
 acontecem em sequências de caracteres que colidem naturalmente e são uma
 tradição tipográfica muito antiga, que ganhamos de graça usando o LaTeX.
 
+### Exemplo e exercício
+
 Vejamos o exemplos em [`exemplos/fontes.tex`](exemplos/fontes.tex) e depois,
 vamos resolver
 [`exercicios/sonhos-noites-verao.tex`](exercicios/sonhos-noites-verao.tex)
@@ -471,6 +488,8 @@ argumentos:
 
 Existem outras opções e comandos que nos permitem customizar o conteúdo do
 cabeçalho e do rodapé, mas não trataremos deles nesse workshop.
+
+### Exemplo e exercício
 
 Vejamos alguns exemplos em
 [`exemplos/layouts-pagina.tex`](exemplos/layouts-pagina.tex).
@@ -538,6 +557,8 @@ Começo\hfill meio\hfill fim
 Finalmente, o espaço vertical entre os parágrafos pode ser controlado da mesma
 maneira, com os comandos `\vspace{comprimento}` e `\vfill`.
 
+### Exemplo e exercício
+
 Vejamos mais no exemplo
 [`exemplos/posicao-texto.tex`](exemplos/posicao-texto.tex). Depois, vamos
 resolver
@@ -561,6 +582,8 @@ descrição, respectivamente.
 \end{itemize}
 ```
 
+### Exemplo
+
 Esses conceitos são explorados no arquivo
 [`exemplos/listas.tex`](exemplos/listas.tex). Veremos como criar listas dentro
 de listas e a sintaxe do ambiente `description`.
@@ -580,6 +603,8 @@ adicional ao ambiente de mesmo nome, permitindo customizar a lista facilmente:
   \item Aristóteles
 \end{itemize}
 ```
+
+### Exercício
 
 Para treinar, resolveremos o exercício
 [`exercicios/receita.tex`](exercicios/receita.tex), editando a lista de
@@ -639,6 +664,8 @@ palavras do Robert Bringhurst, em *Elementos do Estilo Tipográfico:*
 > a perguntas do tipo “Como posso enfiar essa quantidade de caracteres naquele
 > tanto de espaço?”. (p. 81)
 
+### Exemplo
+
 Veremos alguns exemplos de tabelas empregando essas ideias em
 [`exemplos/tabelas.tex`](exemplos/tabelas.tex):
 
@@ -695,6 +722,8 @@ Três comandos a notar: `\centering` pode ser usado ao invés do ambiente
 para adicionar uma legenda à tabela e `\label{referencia}` permite que
 referenciemos a tabela usando `\ref{referencia}`.
 
+### Exemplo e exercício
+
 Vamos voltar à [`exemplos/tabelas.tex`](exemplos/tabelas.tex) e testar o
 ambiente `table`. Então, resolver
 [`exercicios/robos.tex`](exercicios/robos.tex).
@@ -747,6 +776,8 @@ ao `table`:
   \label{fig:imagem}
 \end{figure}
 ```
+
+### Exemplo e exercício
 
 Demonstraremos esses conceitos no arquivo
 [`exemplos/imagens.tex`](exemplos/imagens.tex). Vamos aprender a colocar duas
@@ -862,6 +893,8 @@ O comando `\sqrt{n}` permite escrever raízes:
 \sqrt[3]{\frac{a}{b}}
 ```
 
+### Exemplo e exercício
+
 Vejamos exemplos em [`exemplos/matematica.tex`](exemplos/matematica.tex).
 Depois, vamos resolver [`exercicios/equacao.tex`](exercicios/equacao.tex).
 
@@ -896,6 +929,8 @@ anatomia de uma monografia ficcional. Veja o
 [manual](http://repositorios.cpai.unb.br/ctan/macros/latex/contrib/abntex2/doc/abntex2.pdf)
 para mais informações sobre a organização do arquivo.
 
+### Exemplo
+
 Estudaremos
 [`exemplos/abntex2/trabalho-normatizado.tex`](exemplos/abntex2/trabalho-normatizado.tex).
 
@@ -922,6 +957,8 @@ o comando `\bibliography{arquivo}`. No decorrer do texto, podemos utilizar os
 comandos `\cite[p.~20]{greenwade93}` e `\citeonline` para fazer referência à
 entrada bibliográfica desejada. Um arquivo `bst` fica responsável pelo estilo
 correto da citação e da bibliografia.
+
+### Exemplo
 
 Vejamos o arquivo
 [`exemplos/abntex2/trabalho-normatizado.tex`](exemplos/abntex2/trabalho-normatizado.tex).
@@ -1033,18 +1070,223 @@ Por exemplo, o ambiente a seguir deixa o texto em itálico:
 \newenvironment{italics}{\itshape}{}
 ```
 
+### Exemplo e exercício
+
 Temos exemplos no arquivo [`exemplos/macros.tex`](exemplos/macros.tex). A
 seguir, resolver o exercício
 [`exercicios/automatizando.tex`](exercicios/automatizando.tex).
 
 ## Pacotes úteis
 
-### `microtype`
-### `fancyhdr`
+O usuário de LaTeX tem ao seu dispor uma infinidade de pacotes criados tanto
+pelo projeto oficial, bem como pela comunidade mundial de usuários. O
+[CTAN](https://ctan.org/) é o repositório central desse conhecimento. Muitas
+vezes, é uma ideia melhor utilizar um pacote já pronto e documentado, do que
+tentar implementar uma macro manualmente. A única desvantagem é ter que
+aprender a utilizar pacotes escritos por pessoas diferentes e que, em raros
+casos, podem conflitar entre si ou com a classe utilizada. Não obstante, eles
+podem nos ajudar a economizar muito tempo, uma vez que tenhamos aprendido seu
+uso. A seguir, estudaremos uma lista de pacotes escolhidos especialmente para
+ajudar com a criação de novas classes, nosso próximo tópico.
+
 ### `titling`
+
+Para realizar modificações rotineiras ao título das classes padrão, ao invés de
+reimplementar o comando `\maketitle` como fizemos anteriormente, podemos usar o
+pacote [`titling`](https://www.ctan.org/pkg/titling).
+
+Esse pacote providencia comandos para o controle de `\maketitle` e `\thanks`,
+além de reter os valores de `\author`, `\title` e `\date`, que ficam acessíveis
+por todo o documento através dos comandos `\theauthor`, `\thetitle` e
+`\thedate`, respectivamente.
+
+Os principais comandos são:
+
+- `\pretitle`
+- `\posttitle`
+- `\preauthor`
+- `\postauthor`
+- `\predate`
+- `\postdate`
+
+Os comandos acima permitem que você rode comandos *antes* ou *depois*  do
+título, autor e data. Quando o pacote é carregado, eles automaticamente imitam
+o output de `\maketitle` das classes `report` e `article`:
+
+```latex
+\pretitle{\begin{center}\LARGE}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\begin{center}
+  \large \lineskip 0.5em%
+  \begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+\predate{\begin{center}\large}
+\postdate{\par\end{center}}
+```
+
+Os comandos podem ser modificados para atingir os resultados desejados. Por
+exemplo, para um título alinhado à direta, sem serifas e com a data à esquerda
+e em versaletes:
+
+```latex
+\pretitle{\begin{flushright}\LARGE\sffamily}
+\posttitle{\par\end{flushright}\vskip 0.5em}
+\predate{\begin{flushleft}\large\scshape}
+\postdate{\par\end{flushleft}}
+```
+
 ### `sectsty`
-### `tcolorbox`
+
+O pacote [`sectsty`](https://www.ctan.org/pkg/sectsty) provê maneiras de
+modificar a fonte dos comandos de secionamento do LaTeX (como `\chapter`,
+`\section`, `\subsection` etc.).
+
+Carregando o pacote, ganhamos comandos como `\allsectionsfonts`, para modificar
+a fonte de todas as seções, e `\sectionfont`, para realizar modificações apenas
+nas fontes de seções.
+
+Se desejarmos, por exemplo, que todas as seções de um determinado documento
+fiquem à direta e sejam serifadas, podemos utilizar o seguinte comando:
+
+```latex
+\allsectionsfont{\sffamily\raggedleft}
+```
+
+### `titlesec`
+
+Mais poderoso que o pacote acima, o
+[`titlesec`](https://www.ctan.org/pkg/titlesec) não apenas permite a mudança
+das fontes dos comandos de secionamento, mas também a mudança dos rótulos,
+posição do texto e rodar código antes ou depois do comando de seção.
+
+Recomendamos o tutorial [Making a Resume with some LaTeX
+Magic](https://www.youtube.com/watch?v=VjsX4tznW40) para uma demonstração de
+como utilizar o comando.
+
+### `fancyhdr`
+
+É possível mudar o conteúdo do cabeçalho e rodapé dos documentos facilmente
+utilizando o pacote [`fancyhdr`](https://www.ctan.org/pkg/fancyhdr):
+
+```latex
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+```
+
+Devemos usar comandos diferentes para controlar o cabeçalho e rodapé em função
+do estilo de impressão que está configurado. Vejamos o resultado a seguir para
+documentos que serão impressos em apenas um lado da folha (opção `oneside` na
+maior parte das classes):
+
+![Cabeçalho e rodapé em documento impresso em apenas um lado da
+folha](img/oneside.png)
+
+O exemplo acima, retirado da documentação do `fancyhdr`, é produzido utilizando
+os seguintes comandos:
+
+```latex
+\lhead{} % reseta a parte esquerda do cabeçalho
+\chead{} % reseta a parte direita do cabeçalho
+\rhead{\textbf{The performance of new graduates}}
+\lfoot{From: K. Grant}
+\cfoot{To: Dean A. Smith}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+```
+
+Documentos que serão impressos em ambos os lados do papel (opção `twoside` e
+padrão em classes como `book`) são configurados de forma diferente, pois os
+cabeçalhos e rodapés mudam quando a página é ímpar ou par. Vejamos um exemplo
+seguido do código utilizado para gerá-lo:
+
+![Exemplo de cabeçalho e rodapé para documentos twoside](img/twoside.png)
+
+```latex
+\fancyhead{} % limpa todos os cabeçalhos
+\fancyhead[RO,LE]{\textbf{The performance of new graduates}}
+\fancyfoot{} % limpa todos os rodapés
+\fancyfoot[LE,RO]{\thepage} % \thepage é o número da página
+\fancyfoot[LO,CE]{From: K. Grant} % LO é significa Left Odd; CE significa
+                                  % Center Even; etc.
+\fancyfoot[CO,RE]{To: Dean A. Smith}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+```
+
 ### `geometry`
+
+Mudar o tamanho da página ou margens no LaTeX é uma tarefa bastante fácil com o
+pacote [`geometry`](https://www.ctan.org/pkg/geometry). Para mudar todas as
+margens para `2cm`, por exemplo, podemos carregar o pacote da seguinte maneira:
+
+```latex
+\usepackage[margin=2cm](geometry)
+```
+
+O pacote é extremamente versátil e possui um grande número de opções
+pré-configuradas, como por exemplo `b5paper`, um tamanho de papel bastante
+utilizado para livros e envelopes.
+
+### `tcolorbox`
+
+O pacote [`tcolorbox`](https://www.ctan.org/pkg/tcolorbox) permite a criação de
+caixas de texto coloridas e decoradas, desde muito simples até bastante
+complexas. Elas podem conter um título e podem também ser dividas em duas
+partes, o que é útil para mostrar código e seu output, por exemplo.
+
+A sintaxe é bastante simples e é bastante fácil conseguir efeitos bons com
+poucas opções. O pacote é muito extensível, o que significa que ler a
+documentação e encontrar exemplos é fundamental. A sintaxe básica é reproduzida
+a seguir:
+
+```latex
+\begin{tcolorbox}[options]
+…
+\end{tcolorbox}
+```
+
+Um exemplo com título, cor de fundo e dividido ao meio:
+
+```latex
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=Meu título]
+  Este é um exemplo de \textbf{tcolorbox}.
+  \tcblower
+  Aqui está a parte de baixo da caixa de texto.
+\end{tcolorbox}
+```
+
+### `microtype`
+
+O pacote [`microtype`](https://www.ctan.org/pkg/microtype) “provê ao LaTeX
+extensões como protusão de caracteres, expansão de fonte, ajuste entre palavras
+e kerning adicionais.” Ele melhora consideravelmente a disposição das fontes no
+documento, como ilustrado [neste artigo escrito por Siarhei
+Khirevich](http://www.khirevich.com/latex/microtype/).
+
+Não é necessário configurá-lo, bastando apenas o seguinte comando no preâmbulo:
+
+```latex
+\usepackage{microtype}
+```
+
+### Exemplo e exercício
+
+Veremos exemplos de como utilizar os pacotes acima em
+[`exemplos/pacotes-uteis.tex`](exemplos/pacotes-uteis.tex). A seguir, veremos
+como reproduzir um artigo encontrado na database do SciELO usando os pacotes
+acima em [`exemplos/cinema-silencioso.tex`](exemplos/cinema-silencioso.tex).
+Finalmente, iremos resolver
+[`exercicio/estomatol-herediana.tex`](exercicio/estomatol-herediana.tex).
+
+### Escrevendo novos pacotes
+
+É possível reunir todas as macros criadas por um usuário em um arquivo `.sty`
+(do inglês *style*) e utilizar o comando `\usepackage` para carregá-lo. Essa é
+uma prática comum em instituições para permitir a reutilização de código criado
+anteriormente e facilitar a padronização dos documentos. A Wikipédia tem um
+guia excelente sobre o assunto em forma de Wikibook em [*LaTeX/Creating
+Packages*](https://en.wikibooks.org/wiki/LaTeX/Creating_Packages).
 
 ## Referências
 
