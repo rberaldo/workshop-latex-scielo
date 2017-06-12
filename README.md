@@ -14,3 +14,40 @@ específico; por serem arquivos de texto, são extremamente leves e podem ser
 colocados num sistema de versões, como o Git; o resultado final é profissional,
 além de existirem pacotes que automaticamente formatam o texto de acordo com a
 ABNT, por exemplo.
+
+## Como obter o LaTeX
+
+Recomendamos que todos os participantes do workshop possuam uma cópia do LaTeX
+instalada e funcionando. Veja o [guia-instalao.md](guia-instalacao.md) para
+mais informações.
+
+## Recursos
+
+- [A beginner's guide to
+  LaTeX](http://mirrors.ctan.org/info/beginlatex/beginlatex-3.6.pdf)
+- [The Not So Short Introduction to
+  LaTeX2e](https://tobi.oetiker.ch/lshort/lshort.pdf) — um dos melhores guias
+  para iniciantes em LaTeX.
+- [Beginning
+  LaTeX](https://www.brown.edu/academics/science-center/sites/brown.edu.academics.science-center/files/uploads/beginningLaTeX.pdf)
+  — guia para iniciantes em LaTeX da Brown University.
+- [Wikibook: LaTeX](https://en.wikibooks.org/wiki/LaTeX) — wikibook bastante
+  completo para iniciantes e para consulta.
+- [TeX Q&A no StackExchange](https://tex.stackexchange.com/) — uma das melhores
+  comunidades para perguntas e respostas.
+- [LaTeX Community](http://www.latex-community.org/forum/) — forum para
+  usuários de LaTeX.
+- [/r/LaTeX](https://www.reddit.com/r/latex) — comunidade no Reddit para
+  usuários de LaTeX. Confiram o [post para usuário
+  inciantes](https://www.reddit.com/r/LaTeX/comments/j2326/getting_started_with_LaTeX).
+- [#latex no Slack do opensanca](https://opensanca.slack.com/messages/latex/) —
+  criamos um canal no Slack do opensanca para discutir esse workshop, dar
+  suporte e discutir LaTeX em geral.
+- [Detexify](http://detexify.kirelabs.org/classify.html) — guia visual para
+  encontrar comandos em LaTeX. Desenhe um símbolo usando o mouse, e o app vai
+  buscar símbolos parecidos e seus respectivos commandos.
+- [The Beauty of LaTeX](http://nitens.org/taraborelli/latex) — showcase do poder do LaTeX.
+- [TeXdoc Online](http://texdoc.net/) — encontre documentação facilmente. O
+  site é separado por tópicos.
+- [LaTeX 2e Cheat Sheet](https://wch.github.io/latexsheet/latexsheet-a4.pdf)
+- [A quick guide to LaTeX](http://users.dickinson.edu/~richesod/latex/latexcheatsheet.pdf)
