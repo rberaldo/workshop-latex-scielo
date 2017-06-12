@@ -29,7 +29,8 @@
 18. [Macros](#macros)
 19. [Pacotes úteis](#pacotes-úteis)
 20. [Escrevendo classes](#escrevendo-classes)
-21. [Referências](#referências)
+21. [Conversão de XML para LaTeX](#conversão-de-xml-para-latex)
+22. [Referências](#referências)
 
 ## História e filosofia
 
@@ -1452,19 +1453,50 @@ artigo [“The `memoir` class”][wilson], por Peter Wilson.
   pessoas. Ela são uma ótima fonte de inspiração e soluções que podem ser
   reutilizadas.
 
+## Conversão de XML para LaTeX
+
+É possível converter um arquivo XML para PDF usando o LaTeX como intermediário.
+Uma das maneiras de se fazer isso é usando o `pandoc`, um programa de linha de
+comando disponível no GNU/Linux.
+
+Em nossos exercícios, usaremos o DocBook, um schema XML bastante popular. O
+`pandoc` tem [plugins para a produção de
+JATS](https://github.com/mfenner/pandoc-jats), porém eles não vem instalados
+por padrão.
+
+Converter um arquivo em DocBook até a versão 4.5 é bastante fácil usando o
+`pandoc`. Vejamos o comando a seguir:
+
+```bash
+pandoc -s -t latex -f docbook exemplo.db -o exemplo.tex
+```
+
+Para realizar a conversão, o `pandoc` utiliza um arquivo de template. No
+Ubuntu, esse arquivo está localizado em
+`/usr/share/pandoc/data/templates/default.latex`. Veremos alguns exemplos
+usando esse template.
+
+Veremos, também, o arquivo [`exemplos/latex.template`](exemplos/latex.template):
+
+```bash
+pandoc -s --template=latex.template -t latex -f docbook conversao-xml.db \
+  -o conversao-xml.pdf
+```
+
+Finalmente, faremos nosso próprio template em
+[`exemplos/latex-minimal.template`](exemplos/latex-minimal.template).
+
 ## Referências
 
 - [Sobre a tipografia do *TAoCP* antes do TeX]
   (https://www.reddit.com/r/compsci/comments/2ksmde/what_did_the_art_of_computer_programming_look/)
 - [Guia do Wikibooks](https://en.wikibooks.org/wiki/LaTeX)
-- [História da codificação de fontes]
-  (http://www.lasca.ic.unicamp.br/pub/ctan/macros/latex/doc/encguide.pdf)
 - [LaTeX Tutorials: a Primer]
   (https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf)
 - *Elementos do Estilo Tipográfico versão 3.0*, por Robert Bringhurst. Cosac
   Naify, 2008.
-- [*A beginner’s introduction to typesetting with LaTeX*, por Peter - Flynn]
-  (https://www.ctan.org/pkg/beginlatex)
+- [*A beginner’s introduction to typesetting with LaTeX*]
+  (https://www.ctan.org/pkg/beginlatex), por Peter Flynn
 - [Writing your own class (ShareLaTeX)]
   (https://www.sharelatex.com/learn/Writing_your_own_class)
 - [Creating your own class (Wikibooks)]
