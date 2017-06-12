@@ -40,9 +40,6 @@ mais informações.
 - [/r/LaTeX](https://www.reddit.com/r/latex) — comunidade no Reddit para
   usuários de LaTeX. Confiram o [post para usuário
   inciantes](https://www.reddit.com/r/LaTeX/comments/j2326/getting_started_with_LaTeX).
-- [#latex no Slack do opensanca](https://opensanca.slack.com/messages/latex/) —
-  criamos um canal no Slack do opensanca para discutir esse workshop, dar
-  suporte e discutir LaTeX em geral.
 - [Detexify](http://detexify.kirelabs.org/classify.html) — guia visual para
   encontrar comandos em LaTeX. Desenhe um símbolo usando o mouse, e o app vai
   buscar símbolos parecidos e seus respectivos commandos.
