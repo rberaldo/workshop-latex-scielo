@@ -10,7 +10,7 @@
 % - O comando \input
 %
 
-\documentclass[12pt,oneside,a4paper,brazil]{abntex2}
+\documentclass[12pt,oneside,a4paper,english,brazil]{abntex2}
 % Não carregaremos o pacote polyglossia, uma vez que é carregado por padrão
 % pela classe
 \usepackage{microtype,graphicx,hyperref,blindtext,fontspec}
@@ -43,12 +43,11 @@
 \end{resumo}
 % --- resumo em inglês ---
 \begin{resumo}[Abstract]
-  \begin{english}
-    Abstract in English.
-    \vspace{\onelineskip}
-    \noindent
-    \textbf{Keywords}: latex. abntex. text publishing.
-  \end{english}
+  \selectlanguage{english}
+  Abstract in English.
+  \vspace{\onelineskip}
+  \noindent
+  \textbf{Keywords}: latex. abntex. text publishing.
 \end{resumo}
 
 % Para que a ToC seja incluída nas bookmarks do PDF
@@ -57,11 +56,11 @@
 
 \textual
 \cleardoublepage
-\include{introducao}
-\include{objetivos-justificativa}
-\include{metodologia}
-\include{desenvolvimento}
-\include{conclusao}
+\input{introducao}
+\input{objetivos-justificativa}
+\input{metodologia}
+\input{desenvolvimento}
+\input{conclusao}
 
 \postextual
 \bibliography{trabalho-normatizado}
