@@ -27,7 +27,9 @@
   \frametitle{Conversão de XML para \LaTeX}
   \LARGE
   \mintinline{bash}{
-    pandoc -s -t latex -f docbook exemplo.db -o exemplo.tex
+    pandoc -s -t latex \
+      -f docbook exemplo.db \
+      -o exemplo.tex
   }
 \end{frame}
 
@@ -42,7 +44,8 @@
 \begin{frame}
   \frametitle{Conversão de XML para \LaTeX}
   \LARGE
-  \filename{/usr/share/pandoc/data/templates/default.latex}
+  \filename{/usr/share/pandoc/\\
+  data/templates/default.latex}
 \end{frame}
 
 % Template encontrado online que lida com vários casos

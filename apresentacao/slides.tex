@@ -1,6 +1,6 @@
 \documentclass[final]{beamer}
 \usepackage{hyperref,xspace,graphicx,microtype,minted,
-multicol,mflogo,enumerate,mathtools,hologo,xcolor,tcolorbox,ccicons}
+multicol,mflogo,enumerate,mathtools,hologo,xcolor,tcolorbox,ccicons,calc}
 \usepackage[brazil]{babel}
 
 \usetheme[subsectionpage=progressbar,numbering=none]{metropolis}
@@ -14,7 +14,7 @@ multicol,mflogo,enumerate,mathtools,hologo,xcolor,tcolorbox,ccicons}
 \newcommand{\email}[1]{\href{mailto:#1} {\texttt{\textless#1\textgreater}}
 }
 %
-\newcommand{\latexcode}[1]{\mintinline{latex}{#1}}
+\newmintinline[latexcode]{latex}{}
 %
 \newcommand{\todo}[1]{\colorbox{yellow}{#1}}
 

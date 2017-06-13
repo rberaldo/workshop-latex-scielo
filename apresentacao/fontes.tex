@@ -4,7 +4,7 @@
 % O pdflatex é mais limitado e, por isso, utilizaremos o lualatex
 \begin{frame}
   \frametitle{Fontes}
-  \huge
+  \LARGE
   \code{pdflatex} não suporta todas as fontes, portanto usamos \code{lualatex}
 \end{frame}
 
@@ -12,9 +12,9 @@
 % carregaremos ele mesmo assim.
 \begin{frame}[fragile]
   \frametitle{Fontes}
-  \huge
+  \LARGE
   Aproveitar as vantagens do Unicode:
-  \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
+  \begin{minted}[autogobble,fontsize=\LARGE,breaklines]{latex}
     \usepackage{fontspec}
       \setmainfont{Times New Roman}
   \end{minted}
@@ -24,7 +24,7 @@
 % conter os caracteres que estamos tentando usar.
 \begin{frame}
   \frametitle{Fontes}
-  \Huge
+  \LARGE
   Εὐριπίδης — meu amigo de tantos anos — só lê Достое́вский.
 \end{frame}
 
@@ -32,7 +32,7 @@
 % discutir com mais profundidade no exemplo e exercício.
 \begin{frame}[fragile]
   \frametitle{Fontes e seus tipos}
-  \Huge
+  \LARGE
   \only<1>{Fontes vêm em famílias}
   \only<2>{\latexcode{\textrm}: \textrm{romanas}}
   \only<3>{\latexcode{\emph}: \emph{ênfase}}
@@ -77,7 +77,7 @@
 % Como trocar as fontes. Explicar que fontes matemáticas são outra história.
 \begin{frame}[fragile]
   \frametitle{Fontes}
-  \Large
+  \large
   Carregar fontes usando o \code{fontspec}:
 
   \begin{minted}[autogobble,fontsize=\Large,breaklines]{latex}
@@ -105,7 +105,7 @@
 % substituídas por outro caractere.
 \begin{frame}
   \frametitle{Fontes}
-  \Huge
+  \LARGE
   Linux Libertine e ligaduras
 
   \fontspec{Linux Libertine}{

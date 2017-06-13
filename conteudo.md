@@ -63,11 +63,11 @@ comandos a seguir devem fazer?
 ```
 
 Muito embora você talvez nunca tenha visto um comando em LaTeX, fica claro que
-o primeiro indica o começo de uma seção e o segundo, insere o sumário. Logo
-veremos como esses comandos geram elementos visuais. Assim, os arquivos-fonte
-`.tex` não são textos formatados, mas arquivos em texto plano.  Isso meramente
-significa que o arquivo contém apenas os 95 caracteres ASCII imprimíveis (UTF-8
-também está se tornando lugar comum).
+o primeiro insere o sumário e o segundo indica o começo da seção “Introdução”.
+Logo veremos como esses comandos geram elementos visuais. Como se pode ver, os
+arquivos-fonte `.tex` não são textos formatados, mas arquivos em texto plano.
+Isso meramente significa que o arquivo contém apenas os 95 caracteres ASCII
+imprimíveis (UTF-8 também está se tornando lugar comum).
 
 ## Exemplo: um artigo
 
@@ -337,11 +337,12 @@ Para resolver o problema da localização do nosso arquivo, utilizaremos o pacot
 ```latex
 \usepackage{polyglossia}
   \setdefaultlanguage{brazil}
+  \setotherlanguage{english}
 ```
 
 Algumas das capacidades do `polyglossia` são:
 
-- Ajustar calendário datas de acordo com a língua
+- Ajustar datas de acordo com a língua
 - Ajustar convenções tipográficas para a língua escolhida
 - Hifenização
 - Strings do documento (como em `\today`)
@@ -391,8 +392,8 @@ esses tipos, temos os comandos a seguir à nossa disposição.
 ### Tamanhos
 
 Assim como diferentes tipos carregam diferentes significados, os tamanhos das
-fontes também devem revelar alguma intenção semântica. Os tamanhos também devem
-ter alguma relação entre si: uma escala.
+fontes também devem revelar alguma intenção semântica, alguma relação entre si:
+uma escala.
 
 O LaTeX leva essas questões em consideração automaticamente quando usamos
 comandos como `\section`, por exemplo. Nós também podemos acessar esses
@@ -451,7 +452,7 @@ tradição tipográfica muito antiga, que ganhamos de graça usando o LaTeX.
 
 Vejamos o exemplos em [`exemplos/fontes.tex`](exemplos/fontes.tex) e depois,
 vamos resolver
-[`exercicios/sonhos-noites-verao.tex`](exercicios/sonhos-noites-verao.tex)
+[`exercicios/sonhos-noites-verao.tex`](exercicios/sonhos-noites-verao.tex).
 
 ## Layouts de página
 
@@ -460,9 +461,9 @@ Usando a solução do exercício anterior, vamos mudar a opção de classe
 página. Também carregaremos o pacote `showframe`. As enormes margens parecem
 uma perda de papel — e são —, mas existe um motivo por trás delas: quando lemos
 uma linha longa demais, perdemos a noção de onde ela havia começado. O tamanho
-de linha ideal fica por volta de 66 caracteres, incluindo espaços. É por isso
-que jornais são divididos em tantas colunas. Para resolver esse problema das
-margens, existem algumas soluções:
+de linha ideal fica por volta de 66 caracteres, incluindo espaços.  Esse é o
+mesmo motivo pelo qual jornais são divididos em diversas colunas. Para resolver
+esse problema das margens, existem algumas soluções:
 
 - Dividir o texto em duas colunas (melhor solução)
 - Carregar o pacote `fullpage`
@@ -488,8 +489,8 @@ argumentos:
 - `headings`: rodapé limpo, informações como o nome da seção e número da página
   aparecem no cabeçalho
 
-Existem outras opções e comandos que nos permitem customizar o conteúdo do
-cabeçalho e do rodapé, mas não trataremos deles nesse workshop.
+Mais à frente, veremos como customizar os cabeçalhos e rodapés usando o pacote
+`fancyhdr`.
 
 ### Exemplo e exercício
 
@@ -501,11 +502,11 @@ escrever um certificado de conclusão do workshop. No momento, não vamos nos
 preocupar com a posição exata do texto no papel. Algumas ideias de como
 implementar:
 
-- Um certificado em modo de paisagem é muito mais legal
+- Um certificado em modo de paisagem é muito mais convincente.
 - Quais seriam os tamanhos dos diferentes textos? Qual a relação hierárquica
   entre eles? Justifique sua decisão.
 
-A ideia para este exercício foi tirada do livro *LaTeX Tutorials: a Primer*.
+(A ideia para este exercício foi tirada do livro *LaTeX Tutorials: a Primer*.)
 
 ## Posição do texto
 
@@ -551,7 +552,7 @@ Algumas unidades que o LaTeX reconhece são:
 
 Ainda é possível utilizar o comando `\hfill`, que preenche todo o espaço
 disponível na linha:
-Large
+
 ```latex
 Começo\hfill meio\hfill fim
 ```
@@ -610,7 +611,7 @@ adicional ao ambiente de mesmo nome, permitindo customizar a lista facilmente:
 
 Para treinar, resolveremos o exercício
 [`exercicios/receita.tex`](exercicios/receita.tex), editando a lista de
-ingredientes para uma receite de panqueca. Entretanto, há um problema: os
+ingredientes para uma receita de panqueca. Entretanto, há um problema: os
 contadores resetam quando uma lista é terminada. Podemos criar um novo contador
 `\newcounter{ingredients}` e, ao fim da primeira lista, salvar o valor de
 `enumi` com `\setcounter{ingredients}{\value{enumi}}`. No começo da lista que
@@ -659,7 +660,7 @@ Linhas horizontais podem ser especificadas com `\hline`:
 Linhas, sejam elas horizontais ou verticais, devem ser usadas com moderação. O
 objetivo da tabela é passar informação, portanto o texto deve ser o enfoque
 central. É melhor deixar que a informação respire, do que cercá-la. Nas
-palavras do Robert Bringhurst, em *Elementos do Estilo Tipográfico:*
+palavras de Robert Bringhurst, em *Elementos do Estilo Tipográfico:*
 
 > Assim como o texto, as tabelas ficam canhestras quando abordadas de forma
 > puramente técnica. Boas soluções tipográficas não costumam surgir em resposta
@@ -686,7 +687,7 @@ Até agora, temos colocado nossas tabelas em meio ao texto usando o ambiente
 para que não atrapalhem o fluxo do texto. O LaTeX é capaz de fazer isso usando
 uma abstração conhecida como *float*.
 
-Em LaTeX, os dois ambiente do tipo float mais comuns são `table` e `figure`:
+Em LaTeX, os dois ambientes do tipo float mais comuns são `table` e `figure`:
 
 ```latex
 \begin{table}[posição]
@@ -757,7 +758,7 @@ grande demais para este pequeno workshop. Deixo aqui alguns links úteis:
 rotacionar textos e gráficos, bem como o comando `\includegraphics`.
 
 ```latex
-includegraphics[opções]{imagem}
+\includegraphics[opções]{imagem}
 ```
 
 O comando aceita uma série de opções. Durante este curso, veremos:
@@ -799,7 +800,7 @@ sua escolha para ilustrar a tabela.
 Uma das principais vocação do LaTeX é a matemática. Até agora, temos trabalhado
 no chamado “modo de texto”. No “modo de matemática”, a maneira como o LaTeX
 compreende o que estamos digitando muda consideravelmente. Por exemplo, letras
-comuns são tratadas como variáveis.
+comuns são tratadas como variáveis, que são sempre escritas em itálico.
 
 O modo de matemática vem em dois sabores: *inline* e *displayed*. O primeiro é
 útil quando queremos falar sobre várias variáveis em uma mesma linha. O segundo
@@ -939,7 +940,7 @@ Estudaremos
 ## Bibliografias
 
 Bibliografias em LaTeX não são tão complicadas quanto parecem. A ideia é a
-seguinte: em seu diretório, há um arquivo `bib` que contém uma entrada
+seguinte: no diretório do texto, há um arquivo `bib` que contém uma entrada
 bibliográfica. Por exemplo:
 
 ```bibtex
@@ -958,7 +959,8 @@ No arquivo principal, no local em que desejamos incluir a bibliografia, usamos
 o comando `\bibliography{arquivo}`. No decorrer do texto, podemos utilizar os
 comandos `\cite[p.~20]{greenwade93}` e `\citeonline` para fazer referência à
 entrada bibliográfica desejada. Um arquivo `bst` fica responsável pelo estilo
-correto da citação e da bibliografia.
+correto da citação e da bibliografia. O pacote `abntex2cite` implementa um
+estilo `bst` que corresponde ao estilo de citações da ABNT.
 
 ### Exemplo
 
