@@ -985,7 +985,7 @@ O tipo mais simples de macro é o de substituição:
 \newcommand{\scielo}{SciELO}
 ```
 
-Declarações do tipo `\newcommand` devem fica no preâmbulo do documento. Após
+Declarações do tipo `\newcommand` devem ficar no preâmbulo do documento. Após
 declarar o comando anterior, podemos usar `\scielo` por todo o documento com a
 garantia de que o texto nunca terá erros de digitação.
 
