@@ -959,8 +959,8 @@ No arquivo principal, no local em que desejamos incluir a bibliografia, usamos
 o comando `\bibliography{arquivo}`. No decorrer do texto, podemos utilizar os
 comandos `\cite[p.~20]{greenwade93}` e `\citeonline` para fazer referência à
 entrada bibliográfica desejada. Um arquivo `bst` fica responsável pelo estilo
-correto da citação e da bibliografia. O pacote `abntex2cite` implementa um
-estilo `bst` que corresponde ao estilo de citações da ABNT.
+correto da citação e da bibliografia. O pacote `abntex2cite`, por exemplo,
+implementa um estilo `bst` que corresponde ao estilo de citações da ABNT.
 
 ### Exemplo
 
