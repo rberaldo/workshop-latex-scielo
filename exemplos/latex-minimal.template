@@ -19,9 +19,6 @@
   filecolor=blue,%
   linkcolor=blue,%
   urlcolor=blue}
-$if(url)$
-\usepackage{url}
-$endif$
 $if(graphics)$
 \usepackage{graphicx}
 $endif$
@@ -59,7 +56,7 @@ $endif$
 
 $body$
 
-%$if(alignment)$
+$if(alignment)$
 \end{$alignment$}
 $endif$
 \end{document}
