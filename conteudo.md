@@ -765,11 +765,10 @@ O comando aceita uma série de opções. Durante este curso, veremos:
 
 - `width` e `height`: para controlar o comprimento e altura da imagem. Aceita
   valores como `\textwidth` e `\pageheight`
-- `keepaspectratio`: um valor booleano
+- `keepaspectratio`: um valor booleano (`true` ou `false`)
 - `scale`: por exemplo, o valor de 0.5 reduz a imagem pela metade
 
-Geralmente, usamos o ambiente `figure`, que funciona de maneira muito similar
-ao `table`:
+Geralmente, usamos o ambiente `figure`, um float como o `table`:
 
 ```latex
 \begin{figure}
@@ -797,10 +796,10 @@ sua escolha para ilustrar a tabela.
 
 ## Matemática
 
-Uma das principais vocação do LaTeX é a matemática. Até agora, temos trabalhado
-no chamado “modo de texto”. No “modo de matemática”, a maneira como o LaTeX
-compreende o que estamos digitando muda consideravelmente. Por exemplo, letras
-comuns são tratadas como variáveis, que são sempre escritas em itálico.
+Uma das principais vocações do LaTeX é a matemática. Até agora, temos
+trabalhado no chamado “modo de texto”. No “modo de matemática”, a maneira como
+o LaTeX compreende o que estamos digitando muda consideravelmente. Por exemplo,
+letras comuns são tratadas como variáveis, que são sempre escritas em itálico.
 
 O modo de matemática vem em dois sabores: *inline* e *displayed*. O primeiro é
 útil quando queremos falar sobre várias variáveis em uma mesma linha. O segundo
@@ -812,7 +811,9 @@ cria um novo parágrafo. Os comandos para acessar esses modos são:
 
 (Nota: alguns livros e materiais ensinam o uso de `$ … $` para o modo
 matemático inline e `$$ … $$` para o modo matemático displayed. Essa sintaxe
-pertence ao TeX e foi depreciada no LaTeX.)
+pertence ao TeX e foi depreciada no LaTeX. Para mais informações, [veja este
+tópico sobre melhores práticas no
+StackExchange](https://tex.stackexchange.com/q/510/4541).)
 
 Há uma infinidade de comandos para descrever matemática, portanto não seria
 possível ver todos eles nesse workshop. Porém, vamos explorar rapidamente os
