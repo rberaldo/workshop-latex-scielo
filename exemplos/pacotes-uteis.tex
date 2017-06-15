@@ -6,8 +6,8 @@
 % Demonstra os pacotes:
 % - titling
 % - sectsty
-% - fancyhdr
 % - geometry
+% - fancyhdr
 % - tcolorbox
 % - microtype
 %
@@ -37,12 +37,12 @@
 % \usepackage{sectsty}
 % opções
 %
-% fancyhdr: cabeçalhos e rodapés
-% \usepackage{fancyhdr}
-% opções
-%
 % geometry: controla margens e tamanhos de página
 % \usepackage{geometry}
+% opções
+%
+% fancyhdr: cabeçalhos e rodapés
+% \usepackage{fancyhdr}
 % opções
 %
 % tcolorbox: cria caixas de texto
@@ -113,6 +113,21 @@ fiquem à direta e sejam serifadas, podemos utilizar o seguinte comando:
 \allsectionsfont{\sffamily\raggedleft}
 \end{minted}
 
+\section{O pacote \code{geometry}}
+
+Mudar o tamanho da página ou margens no \LaTeX{} é uma tarefa bastante fácil
+com o pacote \href{https://www.ctan.org/pkg/geometry}{\code{geometry}}. Para
+mudar todas as margens para \code{2cm}, por exemplo, podemos carregar o pacote
+da seguinte maneira:
+
+\begin{minted}[autogobble]{latex}
+\usepackage[margin=2cm](geometry)
+\end{minted}
+
+O pacote é extremamente versátil e possui um grande número de opções
+pré-configuradas, como por exemplo \code{b5paper}, um tamanho de papel bastante
+utilizado para livros e envelopes.
+
 \section{O pacote \code{fancyhdr}}
 
 É possível mudar o conteúdo do cabeçalho e rodapé dos documentos facilmente
@@ -153,21 +168,6 @@ primeiro para documentos impressos em apenas um lado da folha (opção
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \end{minted}
-
-\section{O pacote \code{geometry}}
-
-Mudar o tamanho da página ou margens no \LaTeX{} é uma tarefa bastante fácil
-com o pacote \href{https://www.ctan.org/pkg/geometry}{\code{geometry}}. Para
-mudar todas as margens para \code{2cm}, por exemplo, podemos carregar o pacote
-da seguinte maneira:
-
-\begin{minted}[autogobble]{latex}
-\usepackage[margin=2cm](geometry)
-\end{minted}
-
-O pacote é extremamente versátil e possui um grande número de opções
-pré-configuradas, como por exemplo \code{b5paper}, um tamanho de papel bastante
-utilizado para livros e envelopes.
 
 \section{O pacote \code{tcolorbox}}
 
