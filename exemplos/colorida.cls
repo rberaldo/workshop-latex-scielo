@@ -27,7 +27,6 @@ LaTeX no SciELO]
 % Pacotes necessários
 \RequirePackage[l2tabu, orthodox]{nag} % Reclama do uso de pacotes obsoletos
 \RequirePackage{titling}
-\RequirePackage[margin=3cm]{geometry}
 \RequirePackage{color}
 
 % --- Opções ---
