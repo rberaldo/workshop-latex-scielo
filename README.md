@@ -9,11 +9,27 @@ artigos. Muitas editoras também usam esse programa para formatar seus livros.
 
 O software traz muitas vantagens em relação à editores visuais. Por exemplo, o
 escritor pode focar no texto que escreve, ao invés do tamanho das fontes; os
-arquivos .tex são simplesmente arquivos de texto, que não exigem um editor
+arquivos `.tex` são simplesmente arquivos de texto, que não exigem um editor
 específico; por serem arquivos de texto, são extremamente leves e podem ser
 colocados num sistema de versões, como o Git; o resultado final é profissional,
 além de existirem pacotes que automaticamente formatam o texto de acordo com a
-ABNT, por exemplo.
+ABNT, por exem[lo.
+
+Neste workshop, partiremos do básico do LaTeX, como por exemplo o que são
+comandos e como um arquivo é estruturado; passaremos por tópicos como listas,
+tipografia, tabelas, entre outros; e finalmente veremos como utilizar pacotes
+específicos para escrever artigos científicos, bem como criar classes para
+automatizar essas funções.
+
+## Apresentações
+
+Este workshop nasceu como uma evolução e expansão do [Workshop de LaTeX para o
+OpenSanca](https://github.com/opensanca/workshop-latex). Abaixo, está o
+histórico das apresentações até hoje:
+
+- 13 e 14 de junho de 2016, no SciELO
+- [28 de maio de 2016](https://www.meetup.com/pt-BR/opensanca/events/230102377/), no opensanca
+- [25 de junho de 2016](https://www.meetup.com/pt-BR/opensanca/events/231664154/), no opensanca
 
 ## Como obter o LaTeX
 
