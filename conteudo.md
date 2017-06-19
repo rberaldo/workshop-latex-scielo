@@ -10,8 +10,8 @@
 ## Conteúdo
 
 1. [História e filosofia](#história-e-filosofia)
-2. [LaTeX: uma linguagem de marcação](#latex:-uma-linguagem-de-marcação)
-3. [Exemplo: um artigo](#exemplo:-um-artigo)
+2. [LaTeX: uma linguagem de marcação](#latex-uma-linguagem-de-marcação)
+3. [Exemplo: um artigo](#exemplo-um-artigo)
 4. [Comandos do LaTeX](#comandos-do-latex)
 5. [Símbolos especiais](#símbolos-especiais)
 6. [Preâmbulo do documento](#preâmbulo-do-documento)
