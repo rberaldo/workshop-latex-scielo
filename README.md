@@ -13,7 +13,7 @@ arquivos `.tex` são simplesmente arquivos de texto, que não exigem um editor
 específico; por serem arquivos de texto, são extremamente leves e podem ser
 colocados num sistema de versões, como o Git; o resultado final é profissional,
 além de existirem pacotes que automaticamente formatam o texto de acordo com a
-ABNT, por exem[lo.
+ABNT, por exemplo.
 
 Neste workshop, partiremos do básico do LaTeX, como por exemplo o que são
 comandos e como um arquivo é estruturado; passaremos por tópicos como listas,
