@@ -1,4 +1,4 @@
-# Workshop da LaTeX no SciELO
+# Workshop de LaTeX no SciELO
 
 O LaTeX (/ˈlɑːtɛx/ ou /ˈlɑːtɛk/) é um processador de textos. Diferentemente do
 Word ou LibreOffice Write, no entanto, o usuário não edita o texto visualmente,
